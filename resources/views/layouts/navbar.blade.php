@@ -22,31 +22,36 @@
                                     <a class="flex items-center p-0" href="#"><img
                                             src="../assets/images/Flag/flag-03.png" alt="img-flaf"
                                             class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Spanish</a></li>
+                                            style="width: 15px;height: 15px;min-width: 15px;">Spanish</a>
+                                </li>
                                 <li
                                     class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
                                     <a class="flex items-center p-0" href="#"><img
                                             src="../assets/images/Flag/flag-04.png" alt="img-flaf"
                                             class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Italian</a></li>
+                                            style="width: 15px;height: 15px;min-width: 15px;">Italian</a>
+                                </li>
                                 <li
                                     class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
                                     <a class="flex items-center p-0" href="#"><img
                                             src="../assets/images/Flag/flag-02.png" alt="img-flaf"
                                             class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">French</a></li>
+                                            style="width: 15px;height: 15px;min-width: 15px;">French</a>
+                                </li>
                                 <li
                                     class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
                                     <a class="flex items-center p-0" href="#"><img
                                             src="../assets/images/Flag/flag-05.png" alt="img-flaf"
                                             class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">German</a></li>
+                                            style="width: 15px;height: 15px;min-width: 15px;">German</a>
+                                </li>
                                 <li
                                     class="inline-block w-full px-5 py-3 border-b rounded-b hover:bg-indigo-100 dark:border-gray-700">
                                     <a class="flex items-center p-0" href="#"><img
                                             src="../assets/images/Flag/flag-06.png" alt="img-flaf"
                                             class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Japanese</a></li>
+                                            style="width: 15px;height: 15px;min-width: 15px;">Japanese</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -294,8 +299,8 @@
             </div>
             <div class="flex items-center justify-start flex-1 lg:justify-center sm:items-stretch ">
                 <div class="flex items-center xl:hidden">
-                    <div class="p-1 mr-4 text-white bg-blue-500 shadow-md top-5 rounded-2xl" data-toggle="sidebar"
-                        data-active="true">
+                    <div class="p-1 mr-4 text-white bg-blue-500 shadow-md top-5 rounded-2xl hover:cursor-pointer"
+                        data-toggle="sidebar" data-active="true">
                         <i class="flex items-center">
                             <svg width="20px" height="20px" viewBox="0 0 24 24">
                                 <path fill="currentColor"
@@ -318,20 +323,6 @@
                     <a class="m-0 mb-0 ml-4 text-2xl font-semibold opacity-100;" href="#">
                         Hope UI
                     </a>
-                </div>
-
-
-                <div class="relative items-center hidden text-gray-500 xl:flex dark:text-gray-600">
-                    <svg class="absolute w-5 h-5 pointer-events-none left-3" width="18" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="11.7669" cy="11.7666" r="8.98856" stroke="currentColor" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></circle>
-                        <path d="M18.0186 18.4851L21.5426 22" stroke="currentColor" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <input type="search"
-                        class="w-full py-2 pl-10 pr-3 placeholder-gray-600 border rounded outline-none dark:bg-dark-card focus:shadow-lg dark:border-gray-700 focus:border-blue-500"
-                        name="search" placeholder="Search..." autocomplete="off" aria-label="Search...">
                 </div>
 
                 <div class="hidden transition-all duration-700 ease-in-out lg:flex lg:flex-grow">
@@ -608,9 +599,11 @@
                                 <img src="../assets/images/avatars/01.png" alt="User-Profile"
                                     class="max-w-full rounded-full " height="50px" width="50px">
                                 <div class="hidden ml-4 rtl:ml-0 rtl:mr-4 md:block">
-                                    <h6 class="mb-0 text-base font-medium dark:text-gray-600">Austin Robertson</h6>
-                                    <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">Marketing
-                                        Administrator</p>
+                                    <h6 class="mb-0 text-base font-medium dark:text-gray-600">
+                                        {{ Auth::user()->name }}</h6>
+                                    <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
+                                        {{-- {{ Auth::user()->roles->pluck('name')[0] ?? '' }} --}} Dummy
+                                    </p>
                                 </div>
                             </a>
                             <ul x-show="open"
@@ -621,15 +614,20 @@
                                 x-transition:leave="transition ease-out duration-500"
                                 x-transition:leave-start="opacity-100 transform translate-y-0"
                                 x-transition:leave-end="opacity-0 transform translate-y-0">
-                                <li><a class="block w-full px-4 py-1 text-lg text-gray-600 rounded-t focus:bg-blue-500 focus:text-white whitespace-nowrap hover:text-blue-500 "
-                                        href="../dashboard/app/user-profile.html">Profile</a></li>
-                                <li><a class="block w-full px-4 py-1 text-lg text-gray-600 focus:bg-blue-500 focus:text-white whitespace-nowrap hover:text-blue-500"
-                                        href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
+                                <x-dropdown-link :href="route('logout')" class="rounded-t">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
                                 <li>
-                                    <hr class="dark:border-gray-700 ">
+                                    <hr class="hr-horizontal dark:border-gray-700">
                                 </li>
-                                <li><a class="block w-full px-4 py-1 pt-2 text-lg text-gray-600 rounded-b focus:bg-blue-500 focus:text-white whitespace-nowrap hover:text-blue-500"
-                                        href="../dashboard/auth/sign-in.html">Logout</a></li>
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <x-dropdown-link :href="route('logout')" class="rounded-b" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
                             </ul>
                         </li>
                     </ul>
