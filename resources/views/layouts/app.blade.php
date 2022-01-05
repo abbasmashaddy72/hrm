@@ -9,11 +9,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
-    <link rel="stylesheet" href="../assets/vendor/swiper-slider/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../assets/css/libs.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css?v=1.2.1">
-    <link rel="stylesheet" href="../assets/vendor/Leaflet/leaflet.css">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 
 <body class="overflow-x-hidden bg-body dark:bg-dark-bg">
@@ -28,29 +26,14 @@
             <div class="p-6 py-0 mt-4 lg:p-10 lg:py-0 container-fluid">
                 {{ $slot }}
             </div>
-            @include('layouts.setting')
             @include('layouts.footer')
         </main>
     </div>
 
-    <!-- Library Bundle Script -->
-    <script src="../assets/js/core/libs.min.js"></script>
-    <!-- External Library Bundle Script -->
-    <script src="../assets/js/core/external.min.js"></script>
-    <!-- mapchart Script -->
-    <script src="../assets/js/charts/vectore-chart.js"></script>
-    <!-- fslightbox Script -->
-    <script src="../assets/js/plugins/fslightbox.js"></script>
-    <!-- App Script -->
-    <script src="../assets/js/hope-ui.js"></script>
-    <!-- Alpine Js-->
-    <script src="../assets/js/plugins/alpine.js"></script>
-    <!-- Dashboard Chart & Slider -->
-    <script src="../assets/js/charts/dashboard.js" defer></script>
-    <!-- Widgetchart Script -->
-    <script src="../assets/js/charts/widgetcharts.js"></script>
-    <!-- leaflet JavaScript file -->
-    <script src="../assets/vendor/Leaflet/leaflet.js"></script>
+    <script src="{{ asset('js/theme/libs.min.js') }}"></script>
+    <script src="{{ asset('js/theme/external.min.js') }}"></script>
+    <script src="{{ mix('js/hope-ui.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
 </html>

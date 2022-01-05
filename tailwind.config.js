@@ -1,16 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
     mode: 'jit',
-
-    content: [
+    purge: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php'
     ],
-
     darkMode: 'class',
-
     theme: {
         fontFamily: {
             sans: [
@@ -193,12 +188,10 @@ module.exports = {
             }
         }
     },
-
     variants: {
         extend: {
             zIndex: ['hover']
         }
     },
-
-    plugins: [require('@tailwindcss/forms')]
+    plugins: []
 }

@@ -21,7 +21,13 @@
         "tailwindcss": "^3.0.8"
     },
     "dependencies": {
+        "browserify": "^17.0.0",
         "fslightbox": "^3.3.1",
-        "swiper": "^7.4.1"
+        "https-browserify": "^1.0.0",
+        "nouislider": "^15.5.0",
+        "popper": "^1.0.1",
+        "smooth-scrollbar": "^8.7.2",
+        "swiper": "^7.4.1",
+        "waypoints": "^4.0.1"
     }
 }
