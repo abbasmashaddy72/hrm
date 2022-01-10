@@ -27,7 +27,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/hope-ui.js') }}"></script>
+    <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 

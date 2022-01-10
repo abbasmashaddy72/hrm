@@ -69,6 +69,6 @@
         </div>
     </div>
     <div class="flex-auto hidden w-2/4 h-screen p-0 -mt-1 overflow-hidden bg-blue-500 md:block">
-        <img src="{{ asset('assets/images/auth/01.png') }}" class="object-cover w-full h-full" alt="images">
+        <img src="{{ asset('images/auth/01.png') }}" class="object-cover w-full h-full" alt="images">
     </div>
 </x-guest-layout>

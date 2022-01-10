@@ -51,7 +51,7 @@ module.exports = {
             },
             colors: {
                 container: '#f5f6fa',
-                body: '#f5f7fe',
+                body: '#F1F5F8',
                 gray: {
                     100: '#f8f9fa',
                     200: '#e9ecef',

@@ -2,62 +2,6 @@
     <div class="absolute justify-end flex-grow-0 hidden w-full bg-white top-12 px-7" id="navbar1">
         <ul class="flex mb-2 ml-auto rtl:ml-0 rtl:mr-auto lg:mb-0">
             <li class="nav-item dropdown" x-data="{ open: false }">
-                <button class="block p-2" type="button">
-                    <img src="../assets/images/Flag/flag001.png" @click="open = ! open" class="max-w-full rounded-full"
-                        alt="user" style="height: 30px; min-width: 30px; width: 30px;">
-                    <span class="bg-primary"></span>
-                </button>
-                <div x-show="open" class="absolute z-40 p-0 rounded top-14 w-72" @click.outside="open = false"
-                    x-transition:enter="transition ease-in duration-500"
-                    x-transition:enter-start="opacity-0 transform translate-y-16"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                    x-transition:leave="transition ease-out duration-500"
-                    x-transition:leave-start="opacity-100 transform translate-y-0"
-                    x-transition:leave-end="opacity-0 transform translate-y-0">
-                    <div class="relative flex flex-col bg-white rounded-t-lg rounded-b-lg shadow-lg dark:bg-dark-card">
-                        <div class="p-0 ">
-                            <ul class="flex flex-col p-0 dark:text-gray-600">
-                                <li
-                                    class="inline-block w-full px-5 py-3 border-b rounded-t dark:bg-dark-card dark:hover:bg-indigo-100 dark:border-gray-700">
-                                    <a class="flex items-center p-0" href="#"><img
-                                            src="../assets/images/Flag/flag-03.png" alt="img-flaf"
-                                            class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Spanish</a>
-                                </li>
-                                <li
-                                    class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                    <a class="flex items-center p-0" href="#"><img
-                                            src="../assets/images/Flag/flag-04.png" alt="img-flaf"
-                                            class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Italian</a>
-                                </li>
-                                <li
-                                    class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                    <a class="flex items-center p-0" href="#"><img
-                                            src="../assets/images/Flag/flag-02.png" alt="img-flaf"
-                                            class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">French</a>
-                                </li>
-                                <li
-                                    class="inline-block w-full px-5 py-3 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                    <a class="flex items-center p-0" href="#"><img
-                                            src="../assets/images/Flag/flag-05.png" alt="img-flaf"
-                                            class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">German</a>
-                                </li>
-                                <li
-                                    class="inline-block w-full px-5 py-3 border-b rounded-b hover:bg-indigo-100 dark:border-gray-700">
-                                    <a class="flex items-center p-0" href="#"><img
-                                            src="../assets/images/Flag/flag-06.png" alt="img-flaf"
-                                            class="w-full mr-2"
-                                            style="width: 15px;height: 15px;min-width: 15px;">Japanese</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="nav-item dropdown" x-data="{ open: false }">
                 <a href="#" class="block p-2 group" @click="open = ! open">
                     <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="text-gray-600 dark:text-white hover:text-gray-700 group group-focus:text-gray-700">
@@ -151,109 +95,21 @@
                 </div>
             </li>
             <li class="nav-item dropdown" x-data="{ open: false }">
-                <a href="#" class="block p-2 group" @click="open = !open">
-                    <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="text-gray-600 dark:text-white hover:text-gray-700 group group-focus:text-gray-700">
-                        <path opacity="0.4"
-                            d="M22 15.94C22 18.73 19.76 20.99 16.97 21H16.96H7.05C4.27 21 2 18.75 2 15.96V15.95C2 15.95 2.006 11.524 2.014 9.298C2.015 8.88 2.495 8.646 2.822 8.906C5.198 10.791 9.447 14.228 9.5 14.273C10.21 14.842 11.11 15.163 12.03 15.163C12.95 15.163 13.85 14.842 14.56 14.262C14.613 14.227 18.767 10.893 21.179 8.977C21.507 8.716 21.989 8.95 21.99 9.367C22 11.576 22 15.94 22 15.94Z"
-                            fill="currentColor"></path>
-                        <path
-                            d="M21.4759 5.67351C20.6099 4.04151 18.9059 2.99951 17.0299 2.99951H7.04988C5.17388 2.99951 3.46988 4.04151 2.60388 5.67351C2.40988 6.03851 2.50188 6.49351 2.82488 6.75151L10.2499 12.6905C10.7699 13.1105 11.3999 13.3195 12.0299 13.3195C12.0339 13.3195 12.0369 13.3195 12.0399 13.3195C12.0429 13.3195 12.0469 13.3195 12.0499 13.3195C12.6799 13.3195 13.3099 13.1105 13.8299 12.6905L21.2549 6.75151C21.5779 6.49351 21.6699 6.03851 21.4759 5.67351Z"
-                            fill="currentColor"></path>
-                    </svg>
-                    <span class="bg-primary count-mail"></span>
-                </a>
-                <div x-show="open" class="absolute z-40 p-0 rounded top-14 w-80 r-72" @click.outside="open = false"
-                    x-transition:enter="transition ease-in duration-500"
-                    x-transition:enter-start="opacity-0 transform translate-y-16"
-                    x-transition:enter-end="opacity-100 transform translate-y-0"
-                    x-transition:leave="transition ease-out duration-500"
-                    x-transition:leave-start="opacity-100 transform translate-y-0"
-                    x-transition:leave-end="opacity-0 transform translate-y-0">
-                    <div
-                        class="relative flex flex-col m-0 bg-white rounded-t-lg rounded-b-lg shadow-lg right-64 dark:text-gray-600 dark:bg-dark-card">
-                        <div class="flex justify-between px-5 py-3 bg-blue-500 rounded-t">
-                            <div class="text-base text-left text-white">
-                                <h5 class="mb-0 text-xl font-medium text-white">All Message</h5>
-                            </div>
-                        </div>
-                        <div class="flex-auto p-0">
-                            <a href="#"
-                                class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                <div class="flex items-center">
-                                    <div class="">
-                                        <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                            src="../assets/images/shapes/01.png" alt="">
-                                    </div>
-                                    <div class="ml-3 LR">
-                                        <h6 class="mb-0 text-base font-medium ">Bni Emma Watson</h6>
-                                        <small class="float-start font-size-12">13 Jun</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#"
-                                class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                <div class="flex items-center">
-                                    <div class="">
-                                        <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                            src="../assets/images/shapes/02.png" alt="">
-                                    </div>
-                                    <div class="ml-3">
-                                        <h6 class="mb-0 text-base font-medium">Lorem Ipsum Watson</h6>
-                                        <small class="float-start font-size-12">20 Apr</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#"
-                                class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                <div class="flex items-center">
-                                    <div class="">
-                                        <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                            src="../assets/images/shapes/03.png" alt="">
-                                    </div>
-                                    <div class="ml-3">
-                                        <h6 class="mb-0 text-base font-medium">Why do we use it ?</h6>
-                                        <small class="float-start font-size-12">30 Jun</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#"
-                                class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                <div class="flex items-center">
-                                    <div class="">
-                                        <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                            src="../assets/images/shapes/04.png" alt="">
-                                    </div>
-                                    <div class="ml-3">
-                                        <h6 class="mb-0 text-base font-medium">Variations Passages</h6>
-                                        <small class="float-start font-size-12">12 Sep</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#"
-                                class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                <div class="flex items-center">
-                                    <div class="">
-                                        <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                            src="../assets/images/shapes/05.png" alt="">
-                                    </div>
-                                    <div class="ml-3">
-                                        <h6 class="mb-0 text-base font-medium">Lorem Ipsum generators</h6>
-                                        <small class="float-start font-size-12">5 Dec</small>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>y
-                </div>
-            </li>
-            <li class="nav-item dropdown" x-data="{ open: false }">
                 <a class="flex items-center px-2 py-0" href="#" @click="open = !open">
-                    <img src="../assets/images/avatars/01.png" alt="User-Profile" class="max-w-full rounded-full "
-                        height="50px" width="50px">
+                    @if (!empty(Auth::user()->profile_image))
+                        <img src="{{ Auth::user()->profile_image }}" alt="User-Profile"
+                            class="max-w-full rounded-full " height="50px" width="50px">
+                    @else
+                        <div
+                            class="relative flex items-center justify-center w-12 h-12 m-1 mr-2 text-xl text-white uppercase bg-blue-500 rounded-full">
+                            {{ Auth::user()->initials }}</div>
+                    @endif
                     <div class="hidden ml-4 rtl:ml-0 rtl:mr-4 md:block">
-                        <h6 class="mb-0 text-base font-medium dark:text-gray-600 ">Austin Robertson</h6>
-                        <p class="mb-0 text-gray-500 caption-sub-title dark:text-white">Marketing Administrator</p>
+                        <h6 class="mb-0 text-base font-medium dark:text-gray-600">
+                            {{ Auth::user()->name }}</h6>
+                        <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
+                            {{-- {{ Auth::user()->roles->pluck('name')[0] ?? '' }} --}} Dummy
+                        </p>
                     </div>
                 </a>
                 <ul x-show="open" class="absolute right-0 z-40 w-40 p-0 py-2 bg-white" @click.outside="open = false"
@@ -263,15 +119,20 @@
                     x-transition:leave="transition ease-out duration-500"
                     x-transition:leave-start="opacity-100 transform translate-y-0"
                     x-transition:leave-end="opacity-0 transform translate-y-0">
-                    <li><a class="block w-full px-4 py-1 font-normal text-gray-700 rounded-t focus:bg-blue-500 focus:text-white whitespace-nowrap"
-                            href="../dashboard/app/user-profile.html">Profile</a></li>
-                    <li><a class="block w-full px-4 py-1 font-normal text-gray-700 focus:bg-blue-500 focus:text-white whitespace-nowrap"
-                            href="../dashboard/app/user-privacy-setting.html">Privacy Setting</a></li>
+                    <x-dropdown-link :href="route('logout')" class="rounded-t">
+                        {{ __('Profile') }}
+                    </x-dropdown-link>
                     <li>
-                        <hr class="dropdown-divider">
+                        <hr class="hr-horizontal dark:border-gray-700">
                     </li>
-                    <li><a class="block w-full px-4 py-1 pt-2 font-normal text-gray-700 rounded-b focus:bg-blue-500 focus:text-white whitespace-nowrap"
-                            href="../dashboard/auth/sign-in.html">Logout</a></li>
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-dropdown-link :href="route('logout')" class="rounded-b" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                    </form>
                 </ul>
             </li>
         </ul>
@@ -328,64 +189,6 @@
                 <div class="hidden transition-all duration-700 ease-in-out lg:flex lg:flex-grow">
                     <ul class="flex mb-2 ml-auto rtl:ml-0 rtl:mr-auto lg:mb-0">
                         <li class="nav-item dropdown" x-data="{ open: false }">
-                            <button class="block p-2" type="button">
-                                <img src="../assets/images/Flag/flag001.png" @click="open = ! open"
-                                    class="max-w-full rounded-full" alt="user"
-                                    style="height: 30px; min-width: 30px; width: 30px;">
-                                <span class="bg-primary"></span>
-                            </button>
-                            <div x-show="open" class="absolute z-40 p-0 rounded top-14 w-72 "
-                                @click.outside="open = false" x-transition:enter="transition ease-in duration-500"
-                                x-transition:enter-start="opacity-0 transform translate-y-16"
-                                x-transition:enter-end="opacity-100 transform translate-y-0"
-                                x-transition:leave="transition ease-out duration-500"
-                                x-transition:leave-start="opacity-100 transform translate-y-0"
-                                x-transition:leave-end="opacity-0 transform translate-y-0">
-                                <div
-                                    class="relative flex flex-col bg-white rounded-t-lg rounded-b-lg shadow-lg right-60 dark:bg-dark-card">
-                                    <div class="p-0 ">
-                                        <ul class="flex flex-col p-0">
-                                            <li
-                                                class="inline-block w-full px-5 py-3 text-lg text-gray-500 border-b rounded-t hover:bg-indigo-100 dark:border-gray-700">
-                                                <a class="flex p-0" href="#"><img
-                                                        src="../assets/images/Flag/flag-03.png" alt="img-flag"
-                                                        class="w-full mt-2 mr-2 rtl:mr-0 rtl:ml-2"
-                                                        style="width: 15px;height: 15px;min-width: 15px;">Spanish</a>
-                                            </li>
-                                            <li
-                                                class="inline-block w-full px-5 py-3 text-lg text-gray-500 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                                <a class="flex p-0" href="#"><img
-                                                        src="../assets/images/Flag/flag-04.png" alt="img-flag"
-                                                        class="w-full mt-2 mr-2 rtl:mr-0 rtl:ml-2"
-                                                        style="width: 15px;height: 15px;min-width: 15px;">Italian</a>
-                                            </li>
-                                            <li
-                                                class="inline-block w-full px-5 py-3 text-lg text-gray-500 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                                <a class="flex p-0" href="#"><img
-                                                        src="../assets/images/Flag/flag-02.png" alt="img-flag"
-                                                        class="w-full mt-2 mr-2 rtl:mr-0 rtl:ml-2"
-                                                        style="width: 15px;height: 15px;min-width: 15px;">French</a>
-                                            </li>
-                                            <li
-                                                class="inline-block w-full px-5 py-3 text-lg text-gray-500 border-b hover:bg-indigo-100 dark:border-gray-700">
-                                                <a class="flex p-0" href="#"><img
-                                                        src="../assets/images/Flag/flag-05.png" alt="img-flag"
-                                                        class="w-full mt-2 mr-2 rtl:mr-0 rtl:ml-2"
-                                                        style="width: 15px;height: 15px;min-width: 15px;">German</a>
-                                            </li>
-                                            <li
-                                                class="inline-block w-full px-5 py-3 text-lg text-gray-500 rounded-b hover:bg-indigo-100">
-                                                <a class="flex p-0" href="#"><img
-                                                        src="../assets/images/Flag/flag-06.png" alt="img-flag"
-                                                        class="w-full mt-2 mr-2 rtl:mr-0 rtl:ml-2"
-                                                        style="width: 15px;height: 15px;min-width: 15px;">Japanese</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown" x-data="{ open: false }">
                             <a href="#" class="block p-2 group" @click="open = ! open">
                                 <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                     class="text-gray-600 dark:text-white hover:text-gray-700 group group-focus:text-gray-700">
@@ -398,7 +201,7 @@
                                 </svg>
                                 <span class="bg-danger dots"></span>
                             </a>
-                            <div x-show="open" class="absolute z-40 p-0 top-14 w-80 right-80"
+                            <div x-show="open" class="absolute z-40 p-0 top-14 w-80 right-48"
                                 @click.outside="open = false" x-transition:enter="transition ease-in duration-500"
                                 x-transition:enter-start="opacity-0 transform translate-y-16"
                                 x-transition:enter-end="opacity-100 transform translate-y-0"
@@ -489,115 +292,15 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown" x-data="{ open: false }">
-                            <a href="#" class="block p-2 group" @click="open = !open">
-                                <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                    class="text-gray-600 dark:text-white hover:text-gray-700 group group-focus:text-gray-700">
-                                    <path opacity="0.4"
-                                        d="M22 15.94C22 18.73 19.76 20.99 16.97 21H16.96H7.05C4.27 21 2 18.75 2 15.96V15.95C2 15.95 2.006 11.524 2.014 9.298C2.015 8.88 2.495 8.646 2.822 8.906C5.198 10.791 9.447 14.228 9.5 14.273C10.21 14.842 11.11 15.163 12.03 15.163C12.95 15.163 13.85 14.842 14.56 14.262C14.613 14.227 18.767 10.893 21.179 8.977C21.507 8.716 21.989 8.95 21.99 9.367C22 11.576 22 15.94 22 15.94Z"
-                                        fill="currentColor"></path>
-                                    <path
-                                        d="M21.4759 5.67351C20.6099 4.04151 18.9059 2.99951 17.0299 2.99951H7.04988C5.17388 2.99951 3.46988 4.04151 2.60388 5.67351C2.40988 6.03851 2.50188 6.49351 2.82488 6.75151L10.2499 12.6905C10.7699 13.1105 11.3999 13.3195 12.0299 13.3195C12.0339 13.3195 12.0369 13.3195 12.0399 13.3195C12.0429 13.3195 12.0469 13.3195 12.0499 13.3195C12.6799 13.3195 13.3099 13.1105 13.8299 12.6905L21.2549 6.75151C21.5779 6.49351 21.6699 6.03851 21.4759 5.67351Z"
-                                        fill="currentColor"></path>
-                                </svg>
-                                <span class="bg-primary count-mail"></span>
-                            </a>
-                            <div x-show="open" class="absolute z-40 p-0 rounded top-14 w-80 right-72"
-                                @click.outside="open = false" x-transition:enter="transition ease-in duration-500"
-                                x-transition:enter-start="opacity-0 transform translate-y-16"
-                                x-transition:enter-end="opacity-100 transform translate-y-0"
-                                x-transition:leave="transition ease-out duration-500"
-                                x-transition:leave-start="opacity-100 transform translate-y-0"
-                                x-transition:leave-end="opacity-0 transform translate-y-0">
-                                <div
-                                    class="relative flex flex-col m-0 bg-white rounded-t-lg rounded-b-lg shadow-lg dark:text-gray-600 dark:bg-dark-card">
-                                    <div class="flex justify-between px-5 py-3 bg-blue-500 rounded-t">
-                                        <div class="text-base text-left text-white">
-                                            <h5 class="mb-0 text-xl font-medium text-white">All Message</h5>
-                                        </div>
-                                    </div>
-                                    <div class="flex-auto p-0">
-                                        <a href="#"
-                                            class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                            <div class="flex items-center">
-                                                <div class="">
-                                                    <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                                        src="../assets/images/shapes/01.png" alt="">
-                                                </div>
-                                                <div class="ml-3 rtl:ml-0 rtl:mr-3 LR">
-                                                    <h6 class="mb-0 text-base font-medium">Bni Emma Watson</h6>
-                                                    <small
-                                                        class="text-sm text-gray-500 LR float-start dark:text-gray-600">13
-                                                        Jun</small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                            <div class="flex items-center">
-                                                <div class="">
-                                                    <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                                        src="../assets/images/shapes/02.png" alt="">
-                                                </div>
-                                                <div class="ml-3 rtl:ml-0 rtl:mr-3 LR">
-                                                    <h6 class="mb-0 text-base font-medium">Lorem Ipsum Watson</h6>
-                                                    <small
-                                                        class="text-sm text-gray-500 float-start dark:text-gray-600">20
-                                                        Apr</small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                            <div class="flex items-center">
-                                                <div class="">
-                                                    <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                                        src="../assets/images/shapes/03.png" alt="">
-                                                </div>
-                                                <div class="ml-3 rtl:ml-0 rtl:mr-3 LR">
-                                                    <h6 class="mb-0 text-base font-medium">Why do we use it ?</h6>
-                                                    <small
-                                                        class="text-sm text-gray-500 float-start dark:text-gray-600">30
-                                                        Jun</small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#"
-                                            class="inline-block w-full px-5 py-3 border-b dark:border-gray-700 hover:bg-indigo-100 group">
-                                            <div class="flex items-center">
-                                                <div class="">
-                                                    <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                                        src="../assets/images/shapes/04.png" alt="">
-                                                </div>
-                                                <div class="ml-3 rtl:ml-0 rtl:mr-3 LR">
-                                                    <h6 class="mb-0 text-base font-medium">Variations Passages</h6>
-                                                    <small
-                                                        class="text-sm text-gray-500 float-start dark:text-gray-600">12
-                                                        Sep</small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="inline-block w-full px-5 py-3 hover:bg-indigo-100 group">
-                                            <div class="flex items-center">
-                                                <div class="">
-                                                    <img class="w-10 h-10 p-1 text-blue-400 bg-blue-100 rounded-full dark:bg-blue-800 group-hover:bg-blue-200"
-                                                        src="../assets/images/shapes/05.png" alt="">
-                                                </div>
-                                                <div class="ml-3 rtl:ml-0 rtl:mr-3 LR">
-                                                    <h6 class="mb-0 text-base font-medium">Lorem Ipsum generators</h6>
-                                                    <small
-                                                        class="text-sm text-gray-500 float-start dark:text-gray-600">5
-                                                        Dec</small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown" x-data="{ open: false }">
                             <a class="flex items-center px-2 py-0" href="#" @click="open = !open">
-                                <img src="../assets/images/avatars/01.png" alt="User-Profile"
-                                    class="max-w-full rounded-full " height="50px" width="50px">
+                                @if (!empty(Auth::user()->profile_image))
+                                    <img src="{{ Auth::user()->profile_image }}" alt="User-Profile"
+                                        class="max-w-full rounded-full " height="50px" width="50px">
+                                @else
+                                    <div
+                                        class="relative flex items-center justify-center w-12 h-12 m-1 mr-2 text-xl text-white uppercase bg-blue-500 rounded-full">
+                                        {{ Auth::user()->initials }}</div>
+                                @endif
                                 <div class="hidden ml-4 rtl:ml-0 rtl:mr-4 md:block">
                                     <h6 class="mb-0 text-base font-medium dark:text-gray-600">
                                         {{ Auth::user()->name }}</h6>
