@@ -10,6 +10,7 @@
         "barryvdh/laravel-dompdf": "^0.9.0",
         "bepsvpt/secure-headers": "^7.1",
         "binarytorch/larecipe": "^2.4",
+        "daguilarm/belich-tables": "^1.4",
         "davmixcool/laravel-meta-manager": "^1.2",
         "dietercoopman/smart": "^1.5",
         "diglactic/laravel-breadcrumbs": "^7.0",

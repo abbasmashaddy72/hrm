@@ -10,6 +10,10 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Livewire styles -->
+    <livewire:styles />
+    <!-- Belich tables styles -->
+    @belichTablesCss
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
@@ -34,6 +38,8 @@
     <script src="{{ asset('js/theme/external.min.js') }}"></script>
     <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    <!-- Livewire scripts -->
+    <livewire:scripts />
 </body>
 
 </html>
