@@ -15,7 +15,7 @@ class EmployeeTrainingController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.employee_training.index');
     }
 
     /**

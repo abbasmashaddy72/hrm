@@ -15,7 +15,7 @@ class RolePermissionsController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.role_permissions.index');
     }
 
     /**

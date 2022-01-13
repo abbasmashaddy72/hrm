@@ -15,7 +15,7 @@ class NoticeBoardController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.notice_board.index');
     }
 
     /**

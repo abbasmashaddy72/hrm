@@ -44,5 +44,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\H
     Route::resource('task_comment', 'TaskCommentController');
     Route::resource('email_template', 'EmailTemplateController');
     Route::resource('ticket', 'TicketController');
+    Route::resource('role_permissions', 'RolePermissionsController');
     Route::resource('ticket_comment', 'TicketCommentController');
 });

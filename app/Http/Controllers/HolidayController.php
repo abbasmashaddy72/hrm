@@ -15,7 +15,7 @@ class HolidayController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.holiday.index');
     }
 
     /**
