@@ -14,6 +14,15 @@ class DepartmentSeeder extends Seeder
      */
     public function run()
     {
-        Department::factory()->count(rand(200, 500))->create();
+        $deps = ['Accounts and Finance', 'HR', 'Sales', 'Marketing', 'Infrastructures', 'Research & Development', 'Learning & Development', 'IT Services', 'Product Development', 'Admin', 'Security & Transport'];
+        $min_level = rand(0, 3);
+        $max_level = rand(4, 7);
+
+        foreach ($deps as $dep) {
+            Department::create([
+                'name' => $dep,
+                'level' => $min_level . "-" . $max_level
+            ]);
+        }
     }
 }

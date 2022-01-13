@@ -22,9 +22,9 @@ class CreateTrainingsTable extends Migration
             $table->string('location');
             $table->string('sponsored_by');
             $table->string('organized_by');
-            $table->timestamp('from');
-            $table->timestamp('to');
-            $table->string('description');
+            $table->timestamp('from')->nullable();
+            $table->timestamp('to')->nullable();
+            $table->longText('description');
             $table->timestamps();
         });
     }

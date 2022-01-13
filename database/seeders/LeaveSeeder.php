@@ -14,6 +14,13 @@ class LeaveSeeder extends Seeder
      */
     public function run()
     {
-        Leave::factory()->count(rand(200, 500))->create();
+        $leaves = ['Casual', 'Sick', 'Maternity', 'Marriage'];
+
+        foreach ($leaves as $leave) {
+            Leave::create([
+                'type' => $leave,
+                'number' => rand(0, 10)
+            ]);
+        }
     }
 }

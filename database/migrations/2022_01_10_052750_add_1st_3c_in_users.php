@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Add2cInUsers extends Migration
+class Add1st3cInUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,9 @@ class Add2cInUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('role_permission_id')->after('id')->constrained('role_permissions')->onUpdate('cascade')->onDelete('cascade');
-            $table->enum('type', ['Employee', 'Client']);
+            $table->foreignId('role_permission_id')->constrained('role_permissions')->onUpdate('cascade')->onDelete('cascade')->after('id');
+            $table->enum('type', ['Employee', 'Client'])->after('name');
+            $table->enum('status', ['Active', 'InActive'])->default('Active');
         });
     }
 
@@ -28,6 +29,8 @@ class Add2cInUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumns('role_permissions_id');
+            $table->dropColumns('type');
+            $table->dropColumns('status');
         });
     }
 }

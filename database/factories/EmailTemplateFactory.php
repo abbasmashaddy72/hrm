@@ -14,7 +14,10 @@ class EmailTemplateFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'subject' => $this->faker->title(),
+            'message' => $this->faker->randomHtml(4, 8),
+            'status' => $this->faker->randomElement(['Active', 'InActive']),
         ];
     }
 }

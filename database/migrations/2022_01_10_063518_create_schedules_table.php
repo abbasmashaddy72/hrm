@@ -16,6 +16,7 @@ class CreateSchedulesTable extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->foreignId('shift_id')->constrained('shifts')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('name');
             $table->json('working_days')->nullable();
             $table->date('start');
             $table->date('end');

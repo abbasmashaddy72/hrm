@@ -17,8 +17,9 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->foreignId('designation_id')->constrained('designations')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('role_permission_id')->constrained('role_permissions')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
-            $table->enum('gender', ['Male', 'FeMale', 'Trans'])->default('Active');
+            $table->enum('gender', ['Male', 'FeMale', 'Trans']);
             $table->string('photo')->nullable();
             $table->bigInteger('phone')->unique();
             $table->string('email')->unique();
@@ -29,9 +30,8 @@ class CreateEmployeesTable extends Migration
             $table->string('permanent_address');
             $table->date('date_of_joining');
             $table->date('date_of_reliving')->nullable();
-            $table->enum('payment_type', ['Monthly', 'Hourly'])->default('Monthly');
-            $table->float('basic_salary', 10, 2);
-            $table->float('hourly_rate', 10, 2);
+            $table->enum('payment_type', ['Monthly', 'Hourly', 'Project'])->default('Monthly');
+            $table->float('salary', 10, 2);
             $table->string('bank_name');
             $table->string('branch_name');
             $table->string('account_number');

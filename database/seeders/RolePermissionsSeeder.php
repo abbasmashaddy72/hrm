@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\RolePermissions;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 
 class RolePermissionsSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class RolePermissionsSeeder extends Seeder
         foreach ($roles as $role) {
             RolePermissions::create([
                 'name' => $role,
-                'role' => array_rand($permissions, 8)
+                'permissions' => Arr::random($permissions, 8, false)
             ]);
         }
     }

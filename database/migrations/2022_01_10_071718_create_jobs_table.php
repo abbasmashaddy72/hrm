@@ -16,8 +16,8 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('position');
-            $table->enum('type', ['Contractual', 'Part Time', 'Full Time'])->nullable()->default('NULL');
+            $table->string('position');
+            $table->enum('type', ['Contractual', 'Part Time', 'Full Time'])->nullable();
             $table->integer('experience');
             $table->string('location');
             $table->string('salary_range');

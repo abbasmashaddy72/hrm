@@ -16,14 +16,14 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('department_id')->constrained('departments')->onUpdate('cascade')->onDelete('cascade')->nullable();
-            $table->foreignId('employee_id')->constrained('employee')->onUpdate('cascade')->onDelete('cascade')->nullable();
+            $table->foreignId('employee_id')->constrained('employees')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->string('name');
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('email');
             $table->string('title');
             $table->longText('message');
-            $table->enum('priority', ['Critical', 'High', 'Normal', 'Low'])->nullable()->default('Active');
-            $table->enum('status', ['Open', 'Pending', 'Resolved', 'Closed'])->nullable()->default('Active');
+            $table->enum('priority', ['Critical', 'High', 'Normal', 'Low'])->nullable();
+            $table->enum('status', ['Open', 'Pending', 'Resolved', 'Closed', 'Duplicate'])->nullable();
             $table->timestamps();
         });
     }

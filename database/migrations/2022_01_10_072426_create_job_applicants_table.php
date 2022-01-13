@@ -21,7 +21,7 @@ class CreateJobApplicantsTable extends Migration
             $table->string('phone');
             $table->longText('about');
             $table->enum('status', ['Unread', 'Rejected', 'Primary Selected', 'Call For Interview', 'Confirm'])->default('Unread');
-            $table->string('resume');
+            $table->string('resume')->nullable();
             $table->timestamps();
         });
     }

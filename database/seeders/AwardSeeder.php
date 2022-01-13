@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Award;
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 
 class AwardSeeder extends Seeder
@@ -12,8 +13,15 @@ class AwardSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        Award::factory()->count(rand(200, 500))->create();
+        $awards = ['Employee of the Month', 'Work Anniversary', 'Department MVP', 'Teamwork', 'Sales', 'Most Creative'];
+
+        foreach ($awards as $award) {
+            Award::create([
+                'name' => $award,
+                'description' => $faker->realText(120, 2)
+            ]);
+        }
     }
 }
