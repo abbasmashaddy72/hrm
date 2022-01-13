@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_permissions_id',
+        'type',
+        'status',
     ];
 
     /**
@@ -50,6 +53,6 @@ class User extends Authenticatable
         $firstWord = $name_array[0];
         $lastWord = $name_array[count($name_array) - 1];
 
-        return $firstWord[0] . "" . $lastWord[0];
+        return $firstWord[0] . $lastWord[0];
     }
 }

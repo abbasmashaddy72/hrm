@@ -9,6 +9,11 @@ class RolePermissions extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'status',
+    ];
+
     protected $casts = [
         'permissions' => 'array',
     ];

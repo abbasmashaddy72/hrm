@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class EmployeeTraining extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'training_id',
+        'employee_id',
+        'feedback',
+        'status',
+    ];
+
+    public function training()
+    {
+        return $this->belongsTo(Training::class);
+    }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class);
+    }
 }
