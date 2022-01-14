@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\H
     Route::resource('inventory', 'InventoryController');
     Route::resource('training', 'TrainingController');
     Route::resource('employee_training', 'EmployeeTrainingController');
+    Route::resource('employee_inventory', 'EmployeeInventoryController');
     Route::resource('task', 'TaskController');
     Route::resource('task_comment', 'TaskCommentController');
     Route::resource('email_template', 'EmailTemplateController');

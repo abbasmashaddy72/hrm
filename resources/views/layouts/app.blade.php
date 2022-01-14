@@ -28,7 +28,9 @@
                 @include('layouts.navbar')
             </div>
             <div class="p-6 py-0 mt-4 lg:p-10 lg:py-0 container-fluid">
-                {{ $slot }}
+                <div class="flex flex-wrap">
+                    {{ $slot }}
+                </div>
             </div>
             @include('layouts.footer')
         </main>

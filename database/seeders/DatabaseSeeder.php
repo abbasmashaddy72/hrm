@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\EmployeeInventory;
+use App\Models\EmployeeInventoryComment;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -37,5 +39,7 @@ class DatabaseSeeder extends Seeder
         $this->call(EmailTemplateSeeder::class); // Factory
         $this->call(TicketSeeder::class); // Factory
         $this->call(TicketCommentSeeder::class); // Factory
+        $this->call(EmployeeInventorySeeder::class); // Factory
+        $this->call(EmployeeInventoryCommentSeeder::class); // Factory
     }
 }
