@@ -10,7 +10,6 @@
         "barryvdh/laravel-dompdf": "^0.9.0",
         "bepsvpt/secure-headers": "^7.1",
         "binarytorch/larecipe": "^2.4",
-        "daguilarm/belich-tables": "^1.4",
         "davmixcool/laravel-meta-manager": "^1.2",
         "dietercoopman/smart": "^1.5",
         "diglactic/laravel-breadcrumbs": "^7.0",
@@ -21,7 +20,9 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.8",
+        "mediconesystems/livewire-datatables": "^0.6.8",
         "protonemedia/laravel-form-components": "^3.3",
+        "rappasoft/laravel-livewire-tables": "^1.21",
         "rats/zkteco": "^002.0",
         "silviolleite/laravelpwa": "^2.0",
         "spatie/laravel-medialibrary": "^9.0.0"
@@ -29,6 +30,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
         "beyondcode/laravel-query-detector": "^1.5",
+        "composer/composer": "^2.2",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.17",
         "imanghafoori/laravel-microscope": "^1.0",
