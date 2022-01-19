@@ -40,13 +40,12 @@
             @include('layouts.footer')
         </main>
     </div>
-
+    <!-- Scripts -->
+    @livewireScripts
     <script src="{{ asset('js/theme/libs.min.js') }}"></script>
     <script src="{{ asset('js/theme/external.min.js') }}"></script>
     <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
-    <!-- Scripts -->
-    @livewireScripts
 </body>
 
 </html>
