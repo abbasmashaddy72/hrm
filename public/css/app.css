@@ -1566,10 +1566,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 0.5rem;
 }.pr-10{
     padding-right: 2.5rem;
-}.pb-8{
-    padding-bottom: 2rem;
-}.pb-0{
-    padding-bottom: 0px;
 }.pb-4{
     padding-bottom: 1rem;
 }.pt-5{
@@ -1582,6 +1578,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 2rem;
 }.pl-1{
     padding-left: 0.25rem;
+}.pb-8{
+    padding-bottom: 2rem;
+}.pb-0{
+    padding-bottom: 0px;
 }.pl-6{
     padding-left: 1.5rem;
 }.pt-2{
@@ -1627,10 +1627,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-weight: 500;
 }.font-semibold{
     font-weight: 600;
-}.font-normal{
-    font-weight: 400;
 }.font-bold{
     font-weight: 700;
+}.font-normal{
+    font-weight: 400;
 }.uppercase{
     text-transform: uppercase;
 }.capitalize{
@@ -1835,12 +1835,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.hover\:bg-blue-800:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(23 35 93 / var(--tw-bg-opacity));
-}.hover\:bg-blue-600:hover{
-    --tw-bg-opacity: 1;
-    background-color: rgb(46 70 186 / var(--tw-bg-opacity));
 }.hover\:bg-teal-600:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(26 161 121 / var(--tw-bg-opacity));
+}.hover\:bg-blue-600:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(46 70 186 / var(--tw-bg-opacity));
 }.hover\:bg-blue-100:hover{
     --tw-bg-opacity: 1;
     background-color: rgb(216 221 250 / var(--tw-bg-opacity));
