@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreNoticeBoardRequest;
 use App\Http\Requests\UpdateNoticeBoardRequest;
+use App\Models\EmployeeNoticeBoard;
 use App\Models\NoticeBoard;
+use Illuminate\Support\Facades\DB;
 
 class NoticeBoardController extends Controller
 {
@@ -15,13 +17,17 @@ class NoticeBoardController extends Controller
      */
     public function index()
     {
+        // DB::statement("SET SQL_MODE=''");
+        // $data = EmployeeNoticeBoard::with('employee', 'noticeBoard')->withCount('employee')->groupBy('notice_board_id')->get();
+        // echo $data;
+        // exit;
         return view('pages.notice_board.index');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responseemployee_notice_board_notice_board
      */
     public function create()
     {

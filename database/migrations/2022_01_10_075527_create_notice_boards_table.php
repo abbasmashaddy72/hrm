@@ -19,7 +19,6 @@ class CreateNoticeBoardsTable extends Migration
             $table->longText('description');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
-            $table->json('assigned_to')->nullable();
             $table->foreignId('assigned_by')->constrained('employees')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

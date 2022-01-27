@@ -14,12 +14,16 @@ class NoticeBoard extends Model
         'description',
         'start_date',
         'end_date',
-        'assigned_to',
         'assigned_by',
     ];
 
     public function assignedBy()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(Employee::class, 'assigned_by');
+    }
+
+    public function employees()
+    {
+        return $this->belongsToMany(Employee::class, 'employee_notice_board');
     }
 }

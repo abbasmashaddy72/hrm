@@ -19,7 +19,6 @@ class NoticeBoardFactory extends Factory
             'description' => $this->faker->realText(500, 2),
             'start_date' => $this->faker->dateTimeBetween('-2 years', '+2 years')->format('Y-m-d'),
             'end_date' => $this->faker->dateTimeBetween('-1 years', '+2 years')->format('Y-m-d'),
-            'assigned_to' => array_rand([$this->faker->numberBetween(1, Employee::count() - 1)]),
             'assigned_by' => Employee::pluck('id')[$this->faker->numberBetween(1, Employee::count() - 1)],
         ];
     }
