@@ -42,12 +42,10 @@ class NoticeBoardTable extends LivewireDatatable
             NumberColumn::raw('COUNT(employee_id)'),
 
             DateColumn::name('noticeBoard.start_date')
-                ->filterable()
-                ->label('Created Date'),
+                ->filterable(),
 
             DateColumn::name('noticeBoard.end_date')
-                ->filterable()
-                ->label('Created Date'),
+                ->filterable(),
 
             Column::callback(['notice_board_id'], function ($notice_board_id) {
                 return view('pages.notice_board.actions', ['id' => $notice_board_id]);
