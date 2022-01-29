@@ -4,7 +4,7 @@
             {{ __('Shift') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('shift.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('shift.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.shift-table>
     </x-table-card>

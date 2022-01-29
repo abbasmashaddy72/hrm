@@ -4,7 +4,7 @@
             {{ __('Inventory') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('inventory.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('inventory.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.inventory-table>
     </x-table-card>

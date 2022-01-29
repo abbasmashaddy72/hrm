@@ -4,7 +4,7 @@
             {{ __('Leave') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('leave.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('leave.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.leave-table>
     </x-table-card>

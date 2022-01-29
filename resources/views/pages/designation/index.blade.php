@@ -4,7 +4,7 @@
             {{ __('Designation') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('designation.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('designation.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.designation-table>
     </x-table-card>

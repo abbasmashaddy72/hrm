@@ -4,7 +4,7 @@
             {{ __('Role & Permissions') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('role_permissions.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('role_permissions.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.role-permissions-table>
     </x-table-card>

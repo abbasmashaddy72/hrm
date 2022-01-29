@@ -4,7 +4,7 @@
             {{ __('Task') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('task.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('task.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.task-table>
     </x-table-card>

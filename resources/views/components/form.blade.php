@@ -12,12 +12,15 @@
                     @endif
                 </h4>
             </div>
+            <div class="card-action">
+                <x-a-button href="{{ url()->previous() }}">Back</x-a-button>
+            </div>
         </div>
         <div class="flex-auto p-6">
             <form id="form">
                 {{ $slot }}
                 @if(substr(strstr(Route::currentRouteAction(), '@'), 1) != 'show' )
-                <div class="mb-3">
+                <div class="mt-3">
                     <button type="submit"
                         class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:bg-blue-600 hover:text-white hover:shadow-md ">
                         @if(substr(strstr(Route::currentRouteAction(), '@'), 1) == 'create' )

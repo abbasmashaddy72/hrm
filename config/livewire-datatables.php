@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'default_time_format' => 'H:i',
+    'default_time_format' => 'h:i A',
     'default_date_format' => 'd/m/Y',
 
     /*
@@ -68,8 +68,8 @@ return [
 
     'default_classes' => [
         'row' => [
-            'even' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-gray-100',
-            'odd' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-gray-50',
+            'even' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-gray-300',
+            'odd' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-gray-200',
             'selected' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-yellow-100',
         ],
         'cell' => 'text-sm text-gray-900',

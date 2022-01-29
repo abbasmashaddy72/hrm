@@ -4,7 +4,7 @@
             {{ __('Employee Training') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('employee_training.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('employee_training.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.employee-training-table>
     </x-table-card>

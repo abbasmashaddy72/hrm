@@ -4,7 +4,7 @@
             {{ __('Notice Board') }}
         </x-slot>
         <x-slot name="addbutton">
-            <x-add-button href="{{ route('notice_board.create') }}">Add</x-add-button>
+            <x-a-button href="{{ route('notice_board.create') }}">Add</x-a-button>
         </x-slot>
         <livewire:tables.notice-board-table>
     </x-table-card>
