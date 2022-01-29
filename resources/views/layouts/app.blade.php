@@ -46,6 +46,7 @@
     <script src="{{ asset('js/theme/external.min.js') }}"></script>
     <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>

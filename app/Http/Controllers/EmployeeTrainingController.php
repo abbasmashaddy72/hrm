@@ -25,7 +25,7 @@ class EmployeeTrainingController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.employee_training.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class EmployeeTrainingController extends Controller
      */
     public function show(EmployeeTraining $employeeTraining)
     {
-        //
+        return view('pages.employee_training.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class EmployeeTrainingController extends Controller
      */
     public function edit(EmployeeTraining $employeeTraining)
     {
-        //
+        return view('pages.employee_training.edit');
     }
 
     /**

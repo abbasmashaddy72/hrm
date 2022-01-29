@@ -31,7 +31,7 @@ class NoticeBoardController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.notice_board.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class NoticeBoardController extends Controller
      */
     public function show(NoticeBoard $noticeBoard)
     {
-        //
+        return view('pages.notice_board.show');
     }
 
     /**
@@ -64,7 +64,7 @@ class NoticeBoardController extends Controller
      */
     public function edit(NoticeBoard $noticeBoard)
     {
-        //
+        return view('pages.notice_board.edit');
     }
 
     /**

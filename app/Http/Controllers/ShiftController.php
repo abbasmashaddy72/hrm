@@ -25,7 +25,7 @@ class ShiftController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.shift.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class ShiftController extends Controller
      */
     public function show(Shift $shift)
     {
-        //
+        return view('pages.shift.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class ShiftController extends Controller
      */
     public function edit(Shift $shift)
     {
-        //
+        return view('pages.shift.edit');
     }
 
     /**

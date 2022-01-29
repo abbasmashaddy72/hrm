@@ -25,7 +25,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.inventory.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        //
+        return view('pages.inventory.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        //
+        return view('pages.inventory.edit');
     }
 
     /**

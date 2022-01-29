@@ -25,7 +25,7 @@ class HolidayController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.holiday.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class HolidayController extends Controller
      */
     public function show(Holiday $holiday)
     {
-        //
+        return view('pages.holiday.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class HolidayController extends Controller
      */
     public function edit(Holiday $holiday)
     {
-        //
+        return view('pages.holiday.edit');
     }
 
     /**

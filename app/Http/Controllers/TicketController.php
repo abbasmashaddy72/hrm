@@ -25,7 +25,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.ticket.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        //
+        return view('pages.ticket.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class TicketController extends Controller
      */
     public function edit(Ticket $ticket)
     {
-        //
+        return view('pages.ticket.edit');
     }
 
     /**

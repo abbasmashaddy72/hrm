@@ -25,7 +25,7 @@ class EmployeeAwardController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.employee_award.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class EmployeeAwardController extends Controller
      */
     public function show(EmployeeAward $employeeAward)
     {
-        //
+        return view('pages.employee_award.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class EmployeeAwardController extends Controller
      */
     public function edit(EmployeeAward $employeeAward)
     {
-        //
+        return view('pages.employee_award.edit');
     }
 
     /**

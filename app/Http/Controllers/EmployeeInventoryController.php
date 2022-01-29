@@ -25,7 +25,7 @@ class EmployeeInventoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.employee_inventory.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class EmployeeInventoryController extends Controller
      */
     public function show(EmployeeInventory $employeeInventory)
     {
-        //
+        return view('pages.employee_inventory.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class EmployeeInventoryController extends Controller
      */
     public function edit(EmployeeInventory $employeeInventory)
     {
-        //
+        return view('pages.employee_inventory.edit');
     }
 
     /**

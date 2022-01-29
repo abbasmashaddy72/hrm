@@ -25,7 +25,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.schedule.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class ScheduleController extends Controller
      */
     public function show(Schedule $schedule)
     {
-        //
+        return view('pages.schedule.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class ScheduleController extends Controller
      */
     public function edit(Schedule $schedule)
     {
-        //
+        return view('pages.schedule.edit');
     }
 
     /**

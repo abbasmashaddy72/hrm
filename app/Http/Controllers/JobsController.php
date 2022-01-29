@@ -25,7 +25,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.jobs.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class JobsController extends Controller
      */
     public function show(Jobs $jobs)
     {
-        //
+        return view('pages.jobs.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class JobsController extends Controller
      */
     public function edit(Jobs $jobs)
     {
-        //
+        return view('pages.jobs.edit');
     }
 
     /**

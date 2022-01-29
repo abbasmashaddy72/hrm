@@ -25,7 +25,7 @@ class EmailTemplateController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.email_template.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class EmailTemplateController extends Controller
      */
     public function show(EmailTemplate $emailTemplate)
     {
-        //
+        return view('pages.email_template.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class EmailTemplateController extends Controller
      */
     public function edit(EmailTemplate $emailTemplate)
     {
-        //
+        return view('pages.email_template.edit');
     }
 
     /**

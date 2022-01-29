@@ -25,7 +25,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.award.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class AwardController extends Controller
      */
     public function show(Award $award)
     {
-        //
+        return view('pages.award.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class AwardController extends Controller
      */
     public function edit(Award $award)
     {
-        //
+        return view('pages.award.edit');
     }
 
     /**

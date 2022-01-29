@@ -25,7 +25,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.training.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class TrainingController extends Controller
      */
     public function show(Training $training)
     {
-        //
+        return view('pages.training.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class TrainingController extends Controller
      */
     public function edit(Training $training)
     {
-        //
+        return view('pages.training.edit');
     }
 
     /**

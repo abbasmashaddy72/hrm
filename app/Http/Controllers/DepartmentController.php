@@ -25,7 +25,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.department.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class DepartmentController extends Controller
      */
     public function show(Department $department)
     {
-        //
+        return view('pages.department.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class DepartmentController extends Controller
      */
     public function edit(Department $department)
     {
-        //
+        return view('pages.department.edit');
     }
 
     /**
