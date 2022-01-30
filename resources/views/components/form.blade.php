@@ -18,6 +18,7 @@
         </div>
         <div class="flex-auto p-6">
             <form id="form">
+                @csrf
                 {{ $slot }}
                 @if(substr(strstr(Route::currentRouteAction(), '@'), 1) != 'show' )
                 <div class="mt-3">
