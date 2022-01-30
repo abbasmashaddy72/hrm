@@ -8,6 +8,11 @@ use App\Models\EmployeeAward;
 
 class EmployeeAwardController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Employee Award');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class EmployeeAwardController extends Controller
      */
     public function create()
     {
-        return view('pages.employee_award.create');
+        return view('pages.employee_award.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class EmployeeAwardController extends Controller
      */
     public function show(EmployeeAward $employeeAward)
     {
-        return view('pages.employee_award.show');
+        return view('pages.employee_award.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class EmployeeAwardController extends Controller
      */
     public function edit(EmployeeAward $employeeAward)
     {
-        return view('pages.employee_award.edit');
+        return view('pages.employee_award.ces');
     }
 
     /**

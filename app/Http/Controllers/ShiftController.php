@@ -8,6 +8,11 @@ use App\Models\Shift;
 
 class ShiftController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Shift');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class ShiftController extends Controller
      */
     public function create()
     {
-        return view('pages.shift.create');
+        return view('pages.shift.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class ShiftController extends Controller
      */
     public function show(Shift $shift)
     {
-        return view('pages.shift.show');
+        return view('pages.shift.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class ShiftController extends Controller
      */
     public function edit(Shift $shift)
     {
-        return view('pages.shift.edit');
+        return view('pages.shift.ces');
     }
 
     /**

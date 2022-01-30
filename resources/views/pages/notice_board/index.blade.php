@@ -1,8 +1,5 @@
 <x-app-layout>
     <x-table-card>
-        <x-slot name="title">
-            {{ __('Notice Board') }}
-        </x-slot>
         <x-slot name="addbutton">
             <x-a-button href="{{ route('notice_board.create') }}">Add</x-a-button>
         </x-slot>

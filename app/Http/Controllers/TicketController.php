@@ -8,6 +8,11 @@ use App\Models\Ticket;
 
 class TicketController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Ticket');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        return view('pages.ticket.create');
+        return view('pages.ticket.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        return view('pages.ticket.show');
+        return view('pages.ticket.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class TicketController extends Controller
      */
     public function edit(Ticket $ticket)
     {
-        return view('pages.ticket.edit');
+        return view('pages.ticket.ces');
     }
 
     /**

@@ -8,6 +8,11 @@ use App\Models\Holiday;
 
 class HolidayController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Holiday');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class HolidayController extends Controller
      */
     public function create()
     {
-        return view('pages.holiday.create');
+        return view('pages.holiday.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class HolidayController extends Controller
      */
     public function show(Holiday $holiday)
     {
-        return view('pages.holiday.show');
+        return view('pages.holiday.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class HolidayController extends Controller
      */
     public function edit(Holiday $holiday)
     {
-        return view('pages.holiday.edit');
+        return view('pages.holiday.ces');
     }
 
     /**

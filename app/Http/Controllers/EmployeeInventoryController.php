@@ -8,6 +8,11 @@ use App\Models\EmployeeInventory;
 
 class EmployeeInventoryController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Employee Inventory');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class EmployeeInventoryController extends Controller
      */
     public function create()
     {
-        return view('pages.employee_inventory.create');
+        return view('pages.employee_inventory.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class EmployeeInventoryController extends Controller
      */
     public function show(EmployeeInventory $employeeInventory)
     {
-        return view('pages.employee_inventory.show');
+        return view('pages.employee_inventory.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class EmployeeInventoryController extends Controller
      */
     public function edit(EmployeeInventory $employeeInventory)
     {
-        return view('pages.employee_inventory.edit');
+        return view('pages.employee_inventory.ces');
     }
 
     /**

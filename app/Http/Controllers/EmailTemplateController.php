@@ -8,6 +8,11 @@ use App\Models\EmailTemplate;
 
 class EmailTemplateController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Email Template');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class EmailTemplateController extends Controller
      */
     public function create()
     {
-        return view('pages.email_template.create');
+        return view('pages.email_template.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class EmailTemplateController extends Controller
      */
     public function show(EmailTemplate $emailTemplate)
     {
-        return view('pages.email_template.show');
+        return view('pages.email_template.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class EmailTemplateController extends Controller
      */
     public function edit(EmailTemplate $emailTemplate)
     {
-        return view('pages.email_template.edit');
+        return view('pages.email_template.ces');
     }
 
     /**

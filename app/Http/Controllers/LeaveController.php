@@ -8,6 +8,11 @@ use App\Models\Leave;
 
 class LeaveController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Leave');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class LeaveController extends Controller
      */
     public function create()
     {
-        return view('pages.leave.create');
+        return view('pages.leave.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class LeaveController extends Controller
      */
     public function show(Leave $leave)
     {
-        return view('pages.leave.show');
+        return view('pages.leave.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class LeaveController extends Controller
      */
     public function edit(Leave $leave)
     {
-        return view('pages.leave.edit');
+        return view('pages.leave.ces');
     }
 
     /**

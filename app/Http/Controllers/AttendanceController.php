@@ -8,6 +8,11 @@ use App\Models\Attendance;
 
 class AttendanceController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Attendance');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class AttendanceController extends Controller
      */
     public function create()
     {
-        return view('pages.attendance.create');
+        return view('pages.attendance.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class AttendanceController extends Controller
      */
     public function show(Attendance $attendance)
     {
-        return view('pages.attendance.show');
+        return view('pages.attendance.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class AttendanceController extends Controller
      */
     public function edit(Attendance $attendance)
     {
-        return view('pages.attendance.edit');
+        return view('pages.attendance.ces');
     }
 
     /**

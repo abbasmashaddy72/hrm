@@ -8,6 +8,11 @@ use App\Models\Award;
 
 class AwardController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Award');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        return view('pages.award.create');
+        return view('pages.award.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class AwardController extends Controller
      */
     public function show(Award $award)
     {
-        return view('pages.award.show');
+        return view('pages.award.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class AwardController extends Controller
      */
     public function edit(Award $award)
     {
-        return view('pages.award.edit');
+        return view('pages.award.ces');
     }
 
     /**

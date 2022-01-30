@@ -1,8 +1,5 @@
 <x-app-layout>
     <x-table-card>
-        <x-slot name="title">
-            {{ __('Job Applicant') }}
-        </x-slot>
         <x-slot name="addbutton">
             <x-a-button href="{{ route('job_applicant.create') }}">Add</x-a-button>
         </x-slot>

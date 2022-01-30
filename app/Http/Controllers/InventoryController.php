@@ -8,6 +8,11 @@ use App\Models\Inventory;
 
 class InventoryController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Inventory');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        return view('pages.inventory.create');
+        return view('pages.inventory.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        return view('pages.inventory.show');
+        return view('pages.inventory.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        return view('pages.inventory.edit');
+        return view('pages.inventory.ces');
     }
 
     /**

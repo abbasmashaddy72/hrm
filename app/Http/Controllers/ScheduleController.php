@@ -8,6 +8,11 @@ use App\Models\Schedule;
 
 class ScheduleController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Schedule');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('pages.schedule.create');
+        return view('pages.schedule.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class ScheduleController extends Controller
      */
     public function show(Schedule $schedule)
     {
-        return view('pages.schedule.show');
+        return view('pages.schedule.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class ScheduleController extends Controller
      */
     public function edit(Schedule $schedule)
     {
-        return view('pages.schedule.edit');
+        return view('pages.schedule.ces');
     }
 
     /**

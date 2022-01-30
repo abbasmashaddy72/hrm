@@ -8,6 +8,11 @@ use App\Models\Jobs;
 
 class JobsController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Jobs');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class JobsController extends Controller
      */
     public function create()
     {
-        return view('pages.jobs.create');
+        return view('pages.jobs.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class JobsController extends Controller
      */
     public function show(Jobs $jobs)
     {
-        return view('pages.jobs.show');
+        return view('pages.jobs.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class JobsController extends Controller
      */
     public function edit(Jobs $jobs)
     {
-        return view('pages.jobs.edit');
+        return view('pages.jobs.ces');
     }
 
     /**

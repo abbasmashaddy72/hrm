@@ -8,6 +8,11 @@ use App\Models\RolePermissions;
 
 class RolePermissionsController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Role Permissions');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class RolePermissionsController extends Controller
      */
     public function create()
     {
-        return view('pages.role_permissions.create');
+        return view('pages.role_permissions.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class RolePermissionsController extends Controller
      */
     public function show(RolePermissions $rolePermissions)
     {
-        return view('pages.role_permissions.show');
+        return view('pages.role_permissions.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class RolePermissionsController extends Controller
      */
     public function edit(RolePermissions $rolePermissions)
     {
-        return view('pages.role_permissions.edit');
+        return view('pages.role_permissions.ces');
     }
 
     /**

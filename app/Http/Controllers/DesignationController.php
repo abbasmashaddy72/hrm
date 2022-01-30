@@ -8,6 +8,11 @@ use App\Models\Designation;
 
 class DesignationController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Designation');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class DesignationController extends Controller
      */
     public function create()
     {
-        return view('pages.designation.create');
+        return view('pages.designation.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class DesignationController extends Controller
      */
     public function show(Designation $designation)
     {
-        return view('pages.designation.show');
+        return view('pages.designation.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class DesignationController extends Controller
      */
     public function edit(Designation $designation)
     {
-        return view('pages.designation.edit');
+        return view('pages.designation.ces');
     }
 
     /**

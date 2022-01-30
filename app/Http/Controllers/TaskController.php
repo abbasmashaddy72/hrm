@@ -8,6 +8,11 @@ use App\Models\Task;
 
 class TaskController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Task');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view('pages.task.create');
+        return view('pages.task.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view('pages.task.show');
+        return view('pages.task.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        return view('pages.task.edit');
+        return view('pages.task.ces');
     }
 
     /**

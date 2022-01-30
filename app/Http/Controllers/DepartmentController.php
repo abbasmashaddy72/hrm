@@ -8,6 +8,11 @@ use App\Models\Department;
 
 class DepartmentController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Department');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        return view('pages.department.create');
+        return view('pages.department.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class DepartmentController extends Controller
      */
     public function show(Department $department)
     {
-        return view('pages.department.show');
+        return view('pages.department.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class DepartmentController extends Controller
      */
     public function edit(Department $department)
     {
-        return view('pages.department.edit');
+        return view('pages.department.ces');
     }
 
     /**

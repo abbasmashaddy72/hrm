@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class NoticeBoardController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Notice Board');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +36,7 @@ class NoticeBoardController extends Controller
      */
     public function create()
     {
-        return view('pages.notice_board.create');
+        return view('pages.notice_board.ces');
     }
 
     /**
@@ -53,7 +58,7 @@ class NoticeBoardController extends Controller
      */
     public function show(NoticeBoard $noticeBoard)
     {
-        return view('pages.notice_board.show');
+        return view('pages.notice_board.ces');
     }
 
     /**
@@ -64,7 +69,7 @@ class NoticeBoardController extends Controller
      */
     public function edit(NoticeBoard $noticeBoard)
     {
-        return view('pages.notice_board.edit');
+        return view('pages.notice_board.ces');
     }
 
     /**

@@ -8,6 +8,11 @@ use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Employee');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('pages.employee.create');
+        return view('pages.employee.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        return view('pages.employee.show');
+        return view('pages.employee.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('pages.employee.edit');
+        return view('pages.employee.ces');
     }
 
     /**

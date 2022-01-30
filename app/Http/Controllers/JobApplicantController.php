@@ -8,6 +8,11 @@ use App\Models\JobApplicant;
 
 class JobApplicantController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Job Applicant');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class JobApplicantController extends Controller
      */
     public function create()
     {
-        return view('pages.job_applicant.create');
+        return view('pages.job_applicant.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class JobApplicantController extends Controller
      */
     public function show(JobApplicant $jobApplicant)
     {
-        return view('pages.job_applicant.show');
+        return view('pages.job_applicant.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class JobApplicantController extends Controller
      */
     public function edit(JobApplicant $jobApplicant)
     {
-        return view('pages.job_applicant.edit');
+        return view('pages.job_applicant.ces');
     }
 
     /**

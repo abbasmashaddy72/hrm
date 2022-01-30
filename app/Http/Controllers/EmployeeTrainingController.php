@@ -8,6 +8,11 @@ use App\Models\EmployeeTraining;
 
 class EmployeeTrainingController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Employee Training');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class EmployeeTrainingController extends Controller
      */
     public function create()
     {
-        return view('pages.employee_training.create');
+        return view('pages.employee_training.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class EmployeeTrainingController extends Controller
      */
     public function show(EmployeeTraining $employeeTraining)
     {
-        return view('pages.employee_training.show');
+        return view('pages.employee_training.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class EmployeeTrainingController extends Controller
      */
     public function edit(EmployeeTraining $employeeTraining)
     {
-        return view('pages.employee_training.edit');
+        return view('pages.employee_training.ces');
     }
 
     /**

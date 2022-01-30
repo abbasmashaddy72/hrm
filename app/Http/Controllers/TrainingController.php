@@ -8,6 +8,11 @@ use App\Models\Training;
 
 class TrainingController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Training');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +30,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        return view('pages.training.create');
+        return view('pages.training.ces');
     }
 
     /**
@@ -47,7 +52,7 @@ class TrainingController extends Controller
      */
     public function show(Training $training)
     {
-        return view('pages.training.show');
+        return view('pages.training.ces');
     }
 
     /**
@@ -58,7 +63,7 @@ class TrainingController extends Controller
      */
     public function edit(Training $training)
     {
-        return view('pages.training.edit');
+        return view('pages.training.ces');
     }
 
     /**
