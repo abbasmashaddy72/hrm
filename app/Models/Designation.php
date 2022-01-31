@@ -13,7 +13,7 @@ class Designation extends Model
         'department_id',
         'role_permission_id',
         'name',
-        'status'
+        'status',
     ];
 
     public function department()

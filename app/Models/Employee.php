@@ -54,6 +54,11 @@ class Employee extends Model
 
     public function noticeboards()
     {
-        return $this->belongsToMany(NoticeBoard::class, 'employee_notice_board');
+        return $this->belongsToMany(NoticeBoard::class, 'employee_notice_boards');
+    }
+
+    public function schedules()
+    {
+        return $this->belongsToMany(Schedule::class, 'employee_schedules');
     }
 }

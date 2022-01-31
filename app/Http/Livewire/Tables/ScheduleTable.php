@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Tables;
 
+use App\Models\EmployeeSchedule;
 use App\Models\Schedule;
+use Illuminate\Support\Facades\DB;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 use Mediconesystems\LivewireDatatables\NumberColumn;
@@ -15,11 +17,12 @@ class ScheduleTable extends LivewireDatatable
 
     public function builder()
     {
-        return Schedule::with(['shift']);
+        return EmployeeSchedule::with('employee', 'schedule')->groupBy('schedule_id');
     }
 
     public function columns()
     {
+        DB::statement("SET SQL_MODE=''");
         return [
             Column::checkbox()
                 ->label('Checkbox'),
@@ -29,16 +32,11 @@ class ScheduleTable extends LivewireDatatable
                 ->defaultSort('desc')
                 ->filterable(),
 
-            Column::name('name')
+            Column::name('schedule.name')
                 ->searchable()
                 ->filterable(),
 
-            Column::name('shift.name')
-                ->label('Shift name')
-                ->searchable()
-                ->filterable(),
-
-            Column::callback(['working_days'], function ($working_days) {
+            Column::callback(['schedule.working_days'], function ($working_days) {
                 return  view('pages.schedule.table_working_days_view', compact('working_days'));
             })->label('working_days')
                 ->exportCallback(function ($working_days) {
@@ -46,21 +44,15 @@ class ScheduleTable extends LivewireDatatable
                 })
                 ->unsortable(),
 
-            DateColumn::name('start')
+            DateColumn::name('schedule.start')
                 ->searchable()
                 ->filterable(),
 
-            DateColumn::name('end')
+            DateColumn::name('schedule.end')
                 ->searchable()
                 ->filterable(),
 
-            Column::callback(['selected_employee'], function ($selected_employee) {
-                return  view('pages.schedule.table_selected_employee_view', compact('selected_employee'));
-            })->label('selected_employee')
-                ->exportCallback(function ($selected_employee) {
-                    return (string) $selected_employee;
-                })
-                ->unsortable(),
+            NumberColumn::raw('COUNT(employee_id)'),
 
             Column::callback(['id'], function ($id) {
                 return view('pages.schedule.actions', ['id' => $id]);

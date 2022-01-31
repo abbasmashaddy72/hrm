@@ -6,6 +6,15 @@ use Livewire\Component;
 
 class Create extends Component
 {
+    public $name;
+    public $level;
+    public $status;
+
+    public function submit()
+    {
+        return $this->redirectRoute('');
+    }
+
     public function render()
     {
         return view('livewire.form.department.create');

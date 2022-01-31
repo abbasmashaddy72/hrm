@@ -15,7 +15,7 @@
                         <h6 class="mb-0 text-base font-medium dark:text-gray-600">
                             {{ Auth::user()->name }}</h6>
                         <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
-                            {{-- {{ Auth::user()->roles->pluck('name')[0] ?? '' }} --}} Dummy
+                            {{ Auth::user()->rolePermissions->name }}
                         </p>
                     </div>
                 </a>
@@ -107,7 +107,7 @@
                                     <h6 class="mb-0 text-base font-medium dark:text-gray-600">
                                         {{ Auth::user()->name }}</h6>
                                     <p class="mb-0 text-lg text-gray-600 caption-sub-title dark:text-white">
-                                        {{-- {{ Auth::user()->roles->pluck('name')[0] ?? '' }} --}} Dummy
+                                        {{ Auth::user()->rolePermissions->name }}
                                     </p>
                                 </div>
                             </a>

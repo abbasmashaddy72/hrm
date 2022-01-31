@@ -18,10 +18,13 @@ class UserSeeder extends Seeder
         $users = User::factory()->count(340)->create();
 
         foreach ($users as $user) {
-            Employee::factory()->create([
+            $data = Employee::factory()->create([
                 'user_id' => $user->id,
                 'name' => $user->name,
                 'email' => $user->email
+            ]);
+            User::where('id', $user->id)->update([
+                'employee_id' => $data->id,
             ]);
         }
     }

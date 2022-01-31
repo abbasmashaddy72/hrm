@@ -9,7 +9,6 @@ class Edit extends Component
 {
     public $inventory;
 
-    public $data_id;
     public $name;
     public $vendor_name;
     public $invoice_number;
@@ -23,7 +22,6 @@ class Edit extends Component
     public function mount($inventory)
     {
         $data = Inventory::findOrFail($inventory);
-        $this->data_id = $data->id;
         $this->name = $data->name;
         $this->vendor_name = $data->vendor_name;
         $this->invoice_number = $data->invoice_number;
@@ -41,7 +39,7 @@ class Edit extends Component
             'name' => 'required'
         ]);
 
-        Inventory::where('id', $this->data_id)->update([
+        Inventory::where('id', $this->inventory)->update([
             'name' => $this->name,
             'vendor_name' => $this->vendor_name,
             'invoice_number' => $this->invoice_number,

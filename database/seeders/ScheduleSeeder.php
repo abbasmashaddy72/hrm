@@ -31,7 +31,6 @@ class ScheduleSeeder extends Seeder
                 'working_days' => Arr::random($days, 5, false),
                 'start' => $str,
                 'end' => $str,
-                'selected_employee' => Arr::random(Employee::all()->pluck('id')->toArray(), rand(1, Employee::count() - 1), false),
             ]);
         }
     }

@@ -40,5 +40,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EmployeeInventorySeeder::class); // Factory
         $this->call(EmployeeInventoryCommentSeeder::class); // Factory
         $this->call(EmployeeNoticeBoardSeeder::class); //Factory
+        $this->call(EmployeeScheduleSeeder::class); //Factory
     }
 }
