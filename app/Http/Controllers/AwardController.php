@@ -30,7 +30,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        return view('pages.award.ces');
+        return view('pages.award.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class AwardController extends Controller
      */
     public function show(Award $award)
     {
-        return view('pages.award.ces');
+        $award = $award->id;
+
+        return view('pages.award.show', compact('award'));
     }
 
     /**
@@ -63,7 +65,9 @@ class AwardController extends Controller
      */
     public function edit(Award $award)
     {
-        return view('pages.award.ces');
+        $award = $award->id;
+
+        return view('pages.award.edit', compact('award'));
     }
 
     /**

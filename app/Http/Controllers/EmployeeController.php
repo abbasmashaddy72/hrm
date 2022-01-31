@@ -30,7 +30,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('pages.employee.ces');
+        return view('pages.employee.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        return view('pages.employee.ces');
+        $employee = $employee->id;
+
+        return view('pages.employee.show', compact('employee'));
     }
 
     /**
@@ -63,7 +65,9 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('pages.employee.ces');
+        $employee = $employee->id;
+
+        return view('pages.employee.edit', compact('employee'));
     }
 
     /**

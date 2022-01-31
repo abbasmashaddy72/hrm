@@ -30,7 +30,7 @@ class EmployeeTrainingController extends Controller
      */
     public function create()
     {
-        return view('pages.employee_training.ces');
+        return view('pages.employee_training.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class EmployeeTrainingController extends Controller
      */
     public function show(EmployeeTraining $employeeTraining)
     {
-        return view('pages.employee_training.ces');
+        $employeeTraining = $employeeTraining->id;
+
+        return view('pages.employee_training.show', compact('employeeTraining'));
     }
 
     /**
@@ -63,7 +65,9 @@ class EmployeeTrainingController extends Controller
      */
     public function edit(EmployeeTraining $employeeTraining)
     {
-        return view('pages.employee_training.ces');
+        $employeeTraining = $employeeTraining->id;
+
+        return view('pages.employee_training.edit', compact('employeeTraining'));
     }
 
     /**

@@ -30,7 +30,7 @@ class JobApplicantController extends Controller
      */
     public function create()
     {
-        return view('pages.job_applicant.ces');
+        return view('pages.job_applicant.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class JobApplicantController extends Controller
      */
     public function show(JobApplicant $jobApplicant)
     {
-        return view('pages.job_applicant.ces');
+        $jobApplicant = $jobApplicant->id;
+
+        return view('pages.job_applicant.show', compact('jobApplicant'));
     }
 
     /**
@@ -63,7 +65,9 @@ class JobApplicantController extends Controller
      */
     public function edit(JobApplicant $jobApplicant)
     {
-        return view('pages.job_applicant.ces');
+        $jobApplicant = $jobApplicant->id;
+
+        return view('pages.job_applicant.edit', compact('jobApplicant'));
     }
 
     /**

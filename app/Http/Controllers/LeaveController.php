@@ -30,7 +30,7 @@ class LeaveController extends Controller
      */
     public function create()
     {
-        return view('pages.leave.ces');
+        return view('pages.leave.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class LeaveController extends Controller
      */
     public function show(Leave $leave)
     {
-        return view('pages.leave.ces');
+        $leave = $leave->id;
+
+        return view('pages.leave.show', compact('leave'));
     }
 
     /**
@@ -63,7 +65,9 @@ class LeaveController extends Controller
      */
     public function edit(Leave $leave)
     {
-        return view('pages.leave.ces');
+        $leave = $leave->id;
+
+        return view('pages.leave.edit', compact('leave'));
     }
 
     /**

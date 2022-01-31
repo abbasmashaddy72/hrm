@@ -30,7 +30,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view('pages.task.ces');
+        return view('pages.task.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view('pages.task.ces');
+        $task = $task->id;
+
+        return view('pages.task.show', compact('task'));
     }
 
     /**
@@ -63,7 +65,9 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        return view('pages.task.ces');
+        $task = $task->id;
+
+        return view('pages.task.edit', compact('task'));
     }
 
     /**

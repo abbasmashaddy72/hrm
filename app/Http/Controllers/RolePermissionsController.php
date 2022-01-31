@@ -30,7 +30,7 @@ class RolePermissionsController extends Controller
      */
     public function create()
     {
-        return view('pages.role_permissions.ces');
+        return view('pages.role_permissions.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class RolePermissionsController extends Controller
      */
     public function show(RolePermissions $rolePermissions)
     {
-        return view('pages.role_permissions.ces');
+        $rolePermissions = $rolePermissions->id;
+
+        return view('pages.role_permissions.show', compact('rolePermissions'));
     }
 
     /**
@@ -63,7 +65,9 @@ class RolePermissionsController extends Controller
      */
     public function edit(RolePermissions $rolePermissions)
     {
-        return view('pages.role_permissions.ces');
+        $rolePermissions = $rolePermissions->id;
+
+        return view('pages.role_permissions.edit', compact('rolePermissions'));
     }
 
     /**

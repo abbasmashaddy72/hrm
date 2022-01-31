@@ -22,10 +22,6 @@ class NoticeBoardController extends Controller
      */
     public function index()
     {
-        // DB::statement("SET SQL_MODE=''");
-        // $data = EmployeeNoticeBoard::with('employee', 'noticeBoard')->withCount('employee')->groupBy('notice_board_id')->get();
-        // echo $data;
-        // exit;
         return view('pages.notice_board.index');
     }
 
@@ -36,7 +32,7 @@ class NoticeBoardController extends Controller
      */
     public function create()
     {
-        return view('pages.notice_board.ces');
+        return view('pages.notice_board.create');
     }
 
     /**
@@ -58,7 +54,9 @@ class NoticeBoardController extends Controller
      */
     public function show(NoticeBoard $noticeBoard)
     {
-        return view('pages.notice_board.ces');
+        $noticeBoard = $noticeBoard->id;
+
+        return view('pages.notice_board.show', compact('noticeBoard'));
     }
 
     /**
@@ -69,7 +67,9 @@ class NoticeBoardController extends Controller
      */
     public function edit(NoticeBoard $noticeBoard)
     {
-        return view('pages.notice_board.ces');
+        $noticeBoard = $noticeBoard->id;
+
+        return view('pages.notice_board.edit', compact('noticeBoard'));
     }
 
     /**

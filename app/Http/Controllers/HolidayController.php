@@ -30,7 +30,7 @@ class HolidayController extends Controller
      */
     public function create()
     {
-        return view('pages.holiday.ces');
+        return view('pages.holiday.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class HolidayController extends Controller
      */
     public function show(Holiday $holiday)
     {
-        return view('pages.holiday.ces');
+        $holiday = $holiday->id;
+
+        return view('pages.holiday.show', compact('holiday'));
     }
 
     /**
@@ -63,7 +65,9 @@ class HolidayController extends Controller
      */
     public function edit(Holiday $holiday)
     {
-        return view('pages.holiday.ces');
+        $holiday = $holiday->id;
+
+        return view('pages.holiday.edit', compact('holiday'));
     }
 
     /**

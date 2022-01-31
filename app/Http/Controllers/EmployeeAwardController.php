@@ -30,7 +30,7 @@ class EmployeeAwardController extends Controller
      */
     public function create()
     {
-        return view('pages.employee_award.ces');
+        return view('pages.employee_award.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class EmployeeAwardController extends Controller
      */
     public function show(EmployeeAward $employeeAward)
     {
-        return view('pages.employee_award.ces');
+        $employeeAward = $employeeAward->id;
+
+        return view('pages.employee_award.show', compact('employeeAward'));
     }
 
     /**
@@ -63,7 +65,9 @@ class EmployeeAwardController extends Controller
      */
     public function edit(EmployeeAward $employeeAward)
     {
-        return view('pages.employee_award.ces');
+        $employeeAward = $employeeAward->id;
+
+        return view('pages.employee_award.edit', compact('employeeAward'));
     }
 
     /**

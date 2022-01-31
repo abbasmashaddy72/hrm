@@ -30,7 +30,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        return view('pages.department.ces');
+        return view('pages.department.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class DepartmentController extends Controller
      */
     public function show(Department $department)
     {
-        return view('pages.department.ces');
+        $department = $department->id;
+
+        return view('pages.department.show', compact('department'));
     }
 
     /**
@@ -63,7 +65,9 @@ class DepartmentController extends Controller
      */
     public function edit(Department $department)
     {
-        return view('pages.department.ces');
+        $department = $department->id;
+
+        return view('pages.department.edit', compact('department'));
     }
 
     /**

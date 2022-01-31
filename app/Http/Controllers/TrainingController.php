@@ -30,7 +30,7 @@ class TrainingController extends Controller
      */
     public function create()
     {
-        return view('pages.training.ces');
+        return view('pages.training.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class TrainingController extends Controller
      */
     public function show(Training $training)
     {
-        return view('pages.training.ces');
+        $training = $training->id;
+
+        return view('pages.training.show', compact('training'));
     }
 
     /**
@@ -63,7 +65,9 @@ class TrainingController extends Controller
      */
     public function edit(Training $training)
     {
-        return view('pages.training.ces');
+        $training = $training->id;
+
+        return view('pages.training.edit', compact('training'));
     }
 
     /**

@@ -30,7 +30,7 @@ class DesignationController extends Controller
      */
     public function create()
     {
-        return view('pages.designation.ces');
+        return view('pages.designation.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class DesignationController extends Controller
      */
     public function show(Designation $designation)
     {
-        return view('pages.designation.ces');
+        $designation = $designation->id;
+
+        return view('pages.designation.show', 'designation');
     }
 
     /**
@@ -63,7 +65,9 @@ class DesignationController extends Controller
      */
     public function edit(Designation $designation)
     {
-        return view('pages.designation.ces');
+        $designation = $designation->id;
+
+        return view('pages.designation.edit', 'designation');
     }
 
     /**

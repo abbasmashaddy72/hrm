@@ -30,7 +30,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('pages.schedule.ces');
+        return view('pages.schedule.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class ScheduleController extends Controller
      */
     public function show(Schedule $schedule)
     {
-        return view('pages.schedule.ces');
+        $schedule = $schedule->id;
+
+        return view('pages.schedule.show', compact('schedule'));
     }
 
     /**
@@ -63,7 +65,9 @@ class ScheduleController extends Controller
      */
     public function edit(Schedule $schedule)
     {
-        return view('pages.schedule.ces');
+        $schedule = $schedule->id;
+
+        return view('pages.schedule.edit', compact('schedule'));
     }
 
     /**

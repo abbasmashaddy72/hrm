@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreInventoryRequest;
 use App\Http\Requests\UpdateInventoryRequest;
 use App\Models\Inventory;
+use App\Services\Helper;
 
 class InventoryController extends Controller
 {
     public function __construct()
     {
+        $enum = Helper::getEnum('inventories', 'payment_mode');
+
         view()->share('title', 'Inventory');
+        view()->share('payment_mode', $enum);
     }
 
     /**
@@ -30,7 +34,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        return view('pages.inventory.ces');
+        return view('pages.inventory.create');
     }
 
     /**
@@ -52,7 +56,9 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        return view('pages.inventory.ces');
+        $inventory = $inventory->id;
+
+        return view('pages.inventory.show', compact('inventory'));
     }
 
     /**
@@ -63,7 +69,9 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        return view('pages.inventory.ces');
+        $inventory = $inventory->id;
+
+        return view('pages.inventory.edit', compact('inventory'));
     }
 
     /**

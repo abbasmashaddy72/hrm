@@ -30,7 +30,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        return view('pages.ticket.ces');
+        return view('pages.ticket.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class TicketController extends Controller
      */
     public function show(Ticket $ticket)
     {
-        return view('pages.ticket.ces');
+        $ticket = $ticket->id;
+
+        return view('pages.ticket.show', compact('ticket'));
     }
 
     /**
@@ -63,7 +65,9 @@ class TicketController extends Controller
      */
     public function edit(Ticket $ticket)
     {
-        return view('pages.ticket.ces');
+        $ticket = $ticket->id;
+
+        return view('pages.ticket.edit', compact('ticket'));
     }
 
     /**

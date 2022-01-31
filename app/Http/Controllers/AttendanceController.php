@@ -30,7 +30,7 @@ class AttendanceController extends Controller
      */
     public function create()
     {
-        return view('pages.attendance.ces');
+        return view('pages.attendance.create');
     }
 
     /**
@@ -52,7 +52,9 @@ class AttendanceController extends Controller
      */
     public function show(Attendance $attendance)
     {
-        return view('pages.attendance.ces');
+        $attendance = $attendance->id;
+
+        return view('pages.attendance.show', compact('attendance'));
     }
 
     /**
@@ -63,7 +65,9 @@ class AttendanceController extends Controller
      */
     public function edit(Attendance $attendance)
     {
-        return view('pages.attendance.ces');
+        $attendance = $attendance->id;
+
+        return view('pages.attendance.edit', compact('attendance'));
     }
 
     /**
