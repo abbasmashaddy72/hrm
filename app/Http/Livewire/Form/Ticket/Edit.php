@@ -33,8 +33,29 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'department_id' => '',
+        'employee_id' => '',
+        'name' => '',
+        'phone' => '',
+        'email' => '',
+        'title' => '',
+        'message' => '',
+        'priority' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Ticket::where('id', $this->ticket)->update($validatedData);
+
         return $this->redirectRoute('ticket.index');
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Form\Designation;
 
+use App\Models\Designation;
 use Livewire\Component;
 
 class Create extends Component
@@ -11,8 +12,24 @@ class Create extends Component
     public $name;
     public $status;
 
+    protected $rules = [
+        'department_id' => '',
+        'role_permission_id' => '',
+        'name' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Designation::create($validatedData);
+
         return $this->redirectRoute('designation.index');
     }
 

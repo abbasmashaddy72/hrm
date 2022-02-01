@@ -19,8 +19,22 @@ class Edit extends Component
         $this->description = $data->description;
     }
 
+    protected $rules = [
+        'name' => '',
+        'description' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Award::where('id', $this->award)->update($validatedData);
+
         return $this->redirectRoute('award.index');
     }
 

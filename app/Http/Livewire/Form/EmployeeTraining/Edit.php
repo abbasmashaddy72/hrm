@@ -23,8 +23,24 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'training_id' => '',
+        'employee_id' => '',
+        'feedback' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        EmployeeTraining::where('id', $this->employeeTraining)->update($validatedData);
+
         return $this->redirectRoute('employee_training.index');
     }
 

@@ -35,8 +35,30 @@ class Edit extends Component
         $this->description = $data->description;
     }
 
+    protected $rules = [
+        'title' => '',
+        'type' => '',
+        'subject' => '',
+        'nature' => '',
+        'location' => '',
+        'sponsored_by' => '',
+        'organized_by' => '',
+        'from' => '',
+        'to' => '',
+        'description' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Training::where('id', $this->training)->update($validatedData);
+
         return $this->redirectRoute('training.index');
     }
 

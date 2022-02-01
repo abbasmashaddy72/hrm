@@ -37,8 +37,31 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'title' => '',
+        'position' => '',
+        'type' => '',
+        'experience' => '',
+        'location' => '',
+        'salary_range' => '',
+        'short_description' => '',
+        'description' => '',
+        'apply_date' => '',
+        'close_date' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Jobs::where('id', $this->jobs)->update($validatedData);
+
         return $this->redirectRoute('jobs.index');
     }
 

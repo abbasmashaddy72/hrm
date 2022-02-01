@@ -65,8 +65,45 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'designation_id' => '',
+        'role_permission_id' => '',
+        'user_id' => '',
+        'name' => '',
+        'gender' => '',
+        'photo' => '',
+        'phone' => '',
+        'email' => '',
+        'father_name' => '',
+        'mother_name' => '',
+        'date_of_birth' => '',
+        'present_address' => '',
+        'permanent_address' => '',
+        'date_of_joining' => '',
+        'date_of_reliving' => '',
+        'payment_type' => '',
+        'salary' => '',
+        'bank_name' => '',
+        'branch_name' => '',
+        'account_number' => '',
+        'ifsc_code' => '',
+        'pan_number' => '',
+        'aadhaar_number' => '',
+        'documents' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Employee::where('id', $this->employee)->update($validatedData);
+
         return $this->redirectRoute('employee.index');
     }
 

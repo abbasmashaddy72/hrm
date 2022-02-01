@@ -31,8 +31,28 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'employee_id' => '',
+        'date' => '',
+        'clock_in' => '',
+        'clock_out' => '',
+        'late' => '',
+        'early_leaving' => '',
+        'overtime' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Attendance::where('id', $this->attendance)->update($validatedData);
+
         return $this->redirectRoute('attendance.index');
     }
 

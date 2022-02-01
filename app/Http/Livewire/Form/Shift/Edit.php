@@ -21,8 +21,23 @@ class Edit extends Component
         $this->end = $data->end;
     }
 
+    protected $rules = [
+        'name' => '',
+        'start' => '',
+        'end' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Shift::where('id', $this->shift)->update($validatedData);
+
         return $this->redirectRoute('shift.index');
     }
 

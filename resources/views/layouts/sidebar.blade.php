@@ -31,7 +31,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Dashboard') }}</span>
+                <x-slot name="nav_title">{{ __('Dashboard') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('inventory.index')" :active="request()->routeIs('inventory*')">
                 <i class="icon">
@@ -44,7 +44,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Inventories') }}</span>
+                <x-slot name="nav_title">{{ __('Inventories') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('role_permissions.index')" :active="request()->routeIs('role_permissions*')">
                 <i class="icon">
@@ -57,7 +57,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Role & Permissions') }}</span>
+                <x-slot name="nav_title">{{ __('Role & Permissions') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('department.index')" :active="request()->routeIs('department*')">
                 <i class="icon">
@@ -70,7 +70,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Departments') }}</span>
+                <x-slot name="nav_title">{{ __('Departments') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('designation.index')" :active="request()->routeIs('designation*')">
                 <i class="icon">
@@ -83,7 +83,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Designations') }}</span>
+                <x-slot name="nav_title">{{ __('Designations') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('jobs.index')" :active="request()->routeIs('jobs*')">
                 <i class="icon">
@@ -96,7 +96,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Jobs') }}</span>
+                <x-slot name="nav_title">{{ __('Jobs') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('job_applicant.index')" :active="request()->routeIs('job_applicant*')">
                 <i class="icon">
@@ -109,7 +109,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Job Applicants') }}</span>
+                <x-slot name="nav_title">{{ __('Job Applicants') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('holiday.index')" :active="request()->routeIs('holiday*')">
                 <i class="icon">
@@ -122,7 +122,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Holidays') }}</span>
+                <x-slot name="nav_title">{{ __('Holidays') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('leave.index')" :active="request()->routeIs('leave*')">
                 <i class="icon">
@@ -135,7 +135,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Leaves') }}</span>
+                <x-slot name="nav_title">{{ __('Leaves') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('employee.index')" :active="request()->routeIs('employee/*')">
                 <i class="icon">
@@ -148,7 +148,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Employees') }}</span>
+                <x-slot name="nav_title">{{ __('Employees') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('shift.index')" :active="request()->routeIs('shift*')">
                 <i class="icon">
@@ -161,7 +161,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Shifts') }}</span>
+                <x-slot name="nav_title">{{ __('Shifts') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('schedule.index')" :active="request()->routeIs('schedule*')">
                 <i class="icon">
@@ -174,7 +174,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Schedules') }}</span>
+                <x-slot name="nav_title">{{ __('Schedules') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('attendance.index')" :active="request()->routeIs('attendance*')">
                 <i class="icon">
@@ -187,7 +187,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Attendance') }}</span>
+                <x-slot name="nav_title">{{ __('Attendance') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('award.index')" :active="request()->routeIs('award*')">
                 <i class="icon">
@@ -200,7 +200,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Awards') }}</span>
+                <x-slot name="nav_title">{{ __('Awards') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('employee_award.index')" :active="request()->routeIs('employee_award*')">
                 <i class="icon">
@@ -213,7 +213,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Employee Awards') }}</span>
+                <x-slot name="nav_title">{{ __('Employee Awards') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('employee_inventory.index')" :active="request()->routeIs('employee_inventory*')">
                 <i class="icon">
@@ -226,7 +226,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Employee Inventories') }}</span>
+                <x-slot name="nav_title">{{ __('Employee Inventories') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('training.index')" :active="request()->routeIs('training*')">
                 <i class="icon">
@@ -239,7 +239,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Trainings') }}</span>
+                <x-slot name="nav_title">{{ __('Trainings') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('employee_training.index')" :active="request()->routeIs('employee_training*')">
                 <i class="icon">
@@ -252,7 +252,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Employee Trainings') }}</span>
+                <x-slot name="nav_title">{{ __('Employee Trainings') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('notice_board.index')" :active="request()->routeIs('notice_board*')">
                 <i class="icon">
@@ -265,7 +265,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('NoticeBoards') }}</span>
+                <x-slot name="nav_title">{{ __('NoticeBoards') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('task.index')" :active="request()->routeIs('task*')">
                 <i class="icon">
@@ -278,7 +278,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Tasks') }}</span>
+                <x-slot name="nav_title">{{ __('Tasks') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('ticket.index')" :active="request()->routeIs('ticket*')">
                 <i class="icon">
@@ -291,7 +291,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Tickets') }}</span>
+                <x-slot name="nav_title">{{ __('Tickets') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('email_template.index')" :active="request()->routeIs('email_template*')">
                 <i class="icon">
@@ -304,7 +304,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <span class="item-name rtl:pr-4">{{ __('Email Templates') }}</span>
+                <x-slot name="nav_title">{{ __('Email Templates') }}</x-slot>
             </x-nav-link>
             <x-hr-line />
         </ul>

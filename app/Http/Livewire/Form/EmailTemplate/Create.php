@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Form\EmailTemplate;
 
+use App\Models\EmailTemplate;
 use Livewire\Component;
 
 class Create extends Component
@@ -11,8 +12,24 @@ class Create extends Component
     public $message;
     public $status;
 
+    protected $rules = [
+        'name' => '',
+        'subject' => '',
+        'message' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        EmailTemplate::create($validatedData);
+
         return $this->redirectRoute('email_template.index');
     }
 

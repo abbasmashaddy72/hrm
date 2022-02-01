@@ -21,8 +21,23 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'name' => '',
+        'level' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Department::where('id', $this->department)->update($validatedData);
+
         return $this->redirectRoute('');
     }
 

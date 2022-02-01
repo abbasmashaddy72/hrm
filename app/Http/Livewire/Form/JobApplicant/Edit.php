@@ -29,8 +29,27 @@ class Edit extends Component
         $this->resume = $data->resume;
     }
 
+    protected $rules = [
+        'job_id' => '',
+        'name' => '',
+        'email' => '',
+        'phone' => '',
+        'about' => '',
+        'status' => '',
+        'resume' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        JobApplicant::where('id', $this->jobApplicant)->update($validatedData);
+
         return $this->redirectRoute('job_applicant.index');
     }
 

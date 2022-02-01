@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Form\Schedule;
 
+use App\Models\Schedule;
 use Livewire\Component;
 
 class Create extends Component
@@ -13,8 +14,26 @@ class Create extends Component
     public $working_days;
     public $selected_employee;
 
+    protected $rules = [
+        'shift_id' => '',
+        'name' => '',
+        'start' => '',
+        'end' => '',
+        'working_days' => '',
+        'selected_employee' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Schedule::create($validatedData);
+
         return $this->redirectRoute('schedule.index');
     }
 

@@ -25,8 +25,25 @@ class Edit extends Component
         $this->assigned_by = $data->assigned_by;
     }
 
+    protected $rules = [
+        'title' => '',
+        'description' => '',
+        'start_date' => '',
+        'end_date' => '',
+        'assigned_by' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        NoticeBoard::where('id', $this->noticeBoard)->update($validatedData);
+
         return $this->redirectRoute('');
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Form\Ticket;
 
+use App\Models\Ticket;
 use Livewire\Component;
 
 class Create extends Component
@@ -16,8 +17,29 @@ class Create extends Component
     public $priority;
     public $status;
 
+    protected $rules = [
+        'department_id' => '',
+        'employee_id' => '',
+        'name' => '',
+        'phone' => '',
+        'email' => '',
+        'title' => '',
+        'message' => '',
+        'priority' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Ticket::create($validatedData);
+
         return $this->redirectRoute('ticket.index');
     }
 

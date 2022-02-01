@@ -28,11 +28,11 @@
 
     <div>
         @include('layouts.sidebar')
-        <main class="main-content " x-data="{ data: true }">
+        <main class="flex flex-col justify-between h-screen main-content" x-data="{ data: true }">
             <div class="relative">
                 @include('layouts.navbar')
             </div>
-            <div class="p-6 py-0 mt-4 lg:p-10 lg:py-0 container-fluid">
+            <div class="p-6 py-0 mt-4 mb-auto lg:p-10 lg:py-0 container-fluid">
                 <div class="flex flex-wrap">
                     {{ $slot }}
                 </div>

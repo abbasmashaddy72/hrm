@@ -19,8 +19,22 @@ class Edit extends Component
         $this->date = $data->date;
     }
 
+    protected $rules = [
+        'name' => '',
+        'date' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Holiday::where('id', $this->holiday)->update($validatedData);
+
         return $this->redirectRoute('');
     }
 

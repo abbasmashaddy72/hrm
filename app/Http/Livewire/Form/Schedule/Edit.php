@@ -27,8 +27,26 @@ class Edit extends Component
         $this->selected_employee = $data->selected_employee;
     }
 
+    protected $rules = [
+        'shift_id' => '',
+        'name' => '',
+        'start' => '',
+        'end' => '',
+        'working_days' => '',
+        'selected_employee' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Schedule::where('id', $this->schedule)->update($validatedData);
+
         return $this->redirectRoute('schedule.index');
     }
 

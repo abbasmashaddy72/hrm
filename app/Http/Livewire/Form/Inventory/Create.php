@@ -17,23 +17,28 @@ class Create extends Component
     public $trashed;
     public $description;
 
+    protected $rules = [
+        'name' => '',
+        'vendor_name' => '',
+        'invoice_number' => '',
+        'price' => '',
+        'payment_mode' => '',
+        'stock' => '',
+        'defective' => '',
+        'trashed' => '',
+        'description' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
-        $this->validate([
-            'name' => 'required'
-        ]);
+        $validatedData = $this->validate();
 
-        Inventory::create([
-            'name' => $this->name,
-            'vendor_name' => $this->vendor_name,
-            'invoice_number' => $this->invoice_number,
-            'price' => $this->price,
-            'payment_mode' => $this->payment_mode,
-            'stock' => $this->stock,
-            'defective' => $this->defective,
-            'trashed' => $this->trashed,
-            'description' => $this->description,
-        ]);
+        Inventory::create($validatedData);
 
         return $this->redirectRoute('inventory.index');
     }

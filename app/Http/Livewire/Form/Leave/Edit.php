@@ -19,8 +19,22 @@ class Edit extends Component
         $this->number = $data->number;
     }
 
+    protected $rules = [
+        'type' => '',
+        'number' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Leave::where('id', $this->leave)->update($validatedData);
+
         return $this->redirectRoute('leave.index');
     }
 

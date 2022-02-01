@@ -23,8 +23,24 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'department_id' => '',
+        'role_permission_id' => '',
+        'name' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        Designation::where('id', $this->designation)->update($validatedData);
+
         return $this->redirectRoute('designation.index');
     }
 

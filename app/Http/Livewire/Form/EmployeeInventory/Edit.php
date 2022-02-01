@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Form\EmployeeInventory;
 
 use App\Models\EmployeeAward;
+use App\Models\EmployeeInventory;
 use Livewire\Component;
 
 class Edit extends Component
@@ -23,8 +24,24 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'inventory_id' => '',
+        'employee_id' => '',
+        'description' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        EmployeeInventory::where('id', $this->employeeInventory)->update($validatedData);
+
         return $this->redirectRoute('employee_inventory.index');
     }
 

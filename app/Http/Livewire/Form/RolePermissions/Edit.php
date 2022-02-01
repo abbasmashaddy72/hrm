@@ -21,8 +21,23 @@ class Edit extends Component
         $this->permissions = $data->permissions;
     }
 
+    protected $rules = [
+        'name' => '',
+        'status' => '',
+        'permissions' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        RolePermissions::where('id', $this->rolePermissions)->update($validatedData);
+
         return $this->redirectRoute('role_permissions.index');
     }
 

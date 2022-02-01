@@ -23,8 +23,24 @@ class Edit extends Component
         $this->status = $data->status;
     }
 
+    protected $rules = [
+        'name' => '',
+        'subject' => '',
+        'message' => '',
+        'status' => '',
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submit()
     {
+        $validatedData = $this->validate();
+
+        EmailTemplate::where('id', $this->emailTemplate)->update($validatedData);
+
         return $this->redirectRoute('email_template.index');
     }
 
