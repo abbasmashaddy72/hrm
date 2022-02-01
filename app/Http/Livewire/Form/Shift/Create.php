@@ -12,7 +12,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('shift.index');
     }
 
     public function render()

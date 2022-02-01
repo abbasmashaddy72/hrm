@@ -15,7 +15,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('schedule.index');
     }
 
     public function render()

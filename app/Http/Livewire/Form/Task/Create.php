@@ -7,7 +7,7 @@ use Livewire\Component;
 class Create extends Component
 {
     public $employee_id;
-    public $task;
+    public $name;
     public $start_date;
     public $due_date;
     public $estimated_hour;
@@ -17,7 +17,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('task.index');
     }
 
     public function render()

@@ -34,7 +34,7 @@ class TaskTable extends LivewireDatatable
                 ->filterable()
                 ->label('Employee Name'),
 
-            Column::name('task')
+            Column::name('name')
                 ->searchable()
                 ->filterable(),
 

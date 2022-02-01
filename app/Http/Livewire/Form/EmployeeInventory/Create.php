@@ -13,7 +13,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('employee_inventory.index');
     }
 
     public function render()

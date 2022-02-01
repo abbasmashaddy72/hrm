@@ -11,7 +11,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('holiday.index');
     }
 
     public function render()

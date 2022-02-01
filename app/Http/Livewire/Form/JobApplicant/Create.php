@@ -16,7 +16,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('job_applicant.index');
     }
 
     public function render()

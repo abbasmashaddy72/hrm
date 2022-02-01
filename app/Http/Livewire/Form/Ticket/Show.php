@@ -2,10 +2,13 @@
 
 namespace App\Http\Livewire\Form\Ticket;
 
+use App\Models\Ticket;
 use Livewire\Component;
 
 class Show extends Component
 {
+    public $ticket;
+
     public $department_id;
     public $employee_id;
     public $name;
@@ -16,9 +19,18 @@ class Show extends Component
     public $priority;
     public $status;
 
-    public function mount()
+    public function mount($ticket)
     {
-        //
+        $data = Ticket::findOrFail($ticket);
+        $this->department_id = $data->department_id;
+        $this->employee_id = $data->employee_id;
+        $this->name = $data->name;
+        $this->phone = $data->phone;
+        $this->email = $data->email;
+        $this->title = $data->title;
+        $this->message = $data->message;
+        $this->priority = $data->priority;
+        $this->status = $data->status;
     }
 
     public function render()

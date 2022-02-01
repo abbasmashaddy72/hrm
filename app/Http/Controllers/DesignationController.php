@@ -54,7 +54,7 @@ class DesignationController extends Controller
     {
         $designation = $designation->id;
 
-        return view('pages.designation.show', 'designation');
+        return view('pages.designation.show', compact('designation'));
     }
 
     /**
@@ -67,7 +67,7 @@ class DesignationController extends Controller
     {
         $designation = $designation->id;
 
-        return view('pages.designation.edit', 'designation');
+        return view('pages.designation.edit', compact('designation'));
     }
 
     /**

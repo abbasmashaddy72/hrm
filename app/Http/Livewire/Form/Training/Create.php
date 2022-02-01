@@ -19,7 +19,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('training.index');
     }
 
     public function render()

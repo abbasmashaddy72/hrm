@@ -14,7 +14,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('notice_board.index');
     }
 
     public function render()

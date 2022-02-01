@@ -2,21 +2,26 @@
 
 namespace App\Http\Livewire\Form\Award;
 
+use App\Models\Award;
 use Livewire\Component;
 
 class Edit extends Component
 {
+    public $award;
+
     public $name;
     public $description;
 
-    public function mount()
+    public function mount($award)
     {
-        //
+        $data = Award::findOrFail($award);
+        $this->name = $data->name;
+        $this->description = $data->description;
     }
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('award.index');
     }
 
     public function render()

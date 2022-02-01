@@ -13,7 +13,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('email_template.index');
     }
 
     public function render()

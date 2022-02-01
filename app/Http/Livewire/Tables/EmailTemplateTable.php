@@ -39,7 +39,7 @@ class EmailTemplateTable extends LivewireDatatable
                 ->filterable(['Active', 'InActive']),
 
             Column::callback(['id'], function ($id) {
-                return view('pages.ticket.actions', ['id' => $id]);
+                return view('pages.email_template.actions', ['id' => $id]);
             })->excludeFromExport()->unsortable()->label('Action'),
         ];
     }

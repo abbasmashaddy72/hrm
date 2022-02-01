@@ -42,7 +42,7 @@ class DesignationTable extends LivewireDatatable
                 ->filterable(['Active', 'InActive']),
 
             Column::callback(['id'], function ($id) {
-                return view('pages.department.actions', ['id' => $id]);
+                return view('pages.designation.actions', ['id' => $id]);
             })->excludeFromExport()->unsortable()->label('Action'),
         ];
     }

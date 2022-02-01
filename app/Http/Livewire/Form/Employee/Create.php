@@ -34,7 +34,7 @@ class Create extends Component
 
     public function submit()
     {
-        return $this->redirectRoute('');
+        return $this->redirectRoute('employee.index');
     }
 
     public function render()

@@ -2,10 +2,13 @@
 
 namespace App\Http\Livewire\Form\JobApplicant;
 
+use App\Models\JobApplicant;
 use Livewire\Component;
 
 class Show extends Component
 {
+    public $jobApplicant;
+
     public $job_id;
     public $name;
     public $email;
@@ -14,9 +17,16 @@ class Show extends Component
     public $status;
     public $resume;
 
-    public function mount()
+    public function mount($jobApplicant)
     {
-        //
+        $data = JobApplicant::findOrFail($jobApplicant);
+        $this->job_id = $data->job_id;
+        $this->name = $data->name;
+        $this->email = $data->email;
+        $this->phone = $data->phone;
+        $this->about = $data->about;
+        $this->status = $data->status;
+        $this->resume = $data->resume;
     }
 
     public function render()
