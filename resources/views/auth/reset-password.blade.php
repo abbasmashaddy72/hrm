@@ -28,8 +28,8 @@
                                 <!-- Email Address -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="email" :value="__('Email')" />
-                                        <x-input id="email" class="mt-1" type="email" name="email"
+
+                                        <x-form-input id="email" class="mt-1" type="email" name="email"
                                             :value="old('email')" required autofocus />
                                     </div>
                                 </div>
@@ -37,16 +37,16 @@
                                 <!-- Password -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="password" :value="__('Password')" />
-                                        <x-input id="password" class="mt-1" type="password" name="password"
-                                            required />
+
+                                        <x-form-input id="password" class="mt-1" type="password"
+                                            name="password" required />
                                     </div>
                                 </div>
                                 <!-- Confirm Password -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="password_confirmation" :value="__('Confirm Password')" />
-                                        <x-input id="password_confirmation" class="mt-1" type="password"
+
+                                        <x-form-input id="password_confirmation" class="mt-1" type="password"
                                             name="password_confirmation" required />
                                     </div>
                                 </div>

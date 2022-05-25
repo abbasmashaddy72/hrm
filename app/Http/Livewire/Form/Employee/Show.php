@@ -11,7 +11,6 @@ class Show extends Component
 
     public $designation_id;
     public $role_permission_id;
-    public $user_id;
     public $name;
     public $gender;
     public $photo;
@@ -40,7 +39,6 @@ class Show extends Component
         $data = Employee::findOrFail($employee);
         $this->designation_id = $data->designation_id;
         $this->role_permission_id = $data->role_permission_id;
-        $this->user_id = $data->user_id;
         $this->name = $data->name;
         $this->gender = $data->gender;
         $this->photo = $data->photo;

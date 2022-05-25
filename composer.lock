@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66773cc143cc2218621dad72dfcb5377",
+    "content-hash": "a65597e664494ab04b4b117162a8e8fb",
     "packages": [
         {
             "name": "asantibanez/livewire-charts",
@@ -4284,30 +4284,30 @@
         },
         {
             "name": "protonemedia/laravel-form-components",
-            "version": "3.5.1",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/protonemedia/laravel-form-components.git",
-                "reference": "9d387210801a5ed3f1f3f69a019b7549447d1cc6"
+                "reference": "932386934b41919a07ea25ca64bd9d42ae4757b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/protonemedia/laravel-form-components/zipball/9d387210801a5ed3f1f3f69a019b7549447d1cc6",
-                "reference": "9d387210801a5ed3f1f3f69a019b7549447d1cc6",
+                "url": "https://api.github.com/repos/protonemedia/laravel-form-components/zipball/932386934b41919a07ea25ca64bd9d42ae4757b7",
+                "reference": "932386934b41919a07ea25ca64bd9d42ae4757b7",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "^8.67",
+                "illuminate/support": "^8.67 || ^9.0",
                 "php": "^7.4 || ^8.0 || ^8.1",
-                "symfony/http-foundation": "^5.1.2"
+                "symfony/http-foundation": "^5.1.2 || ^6.0"
             },
             "require-dev": {
                 "livewire/livewire": "^2.0",
                 "mockery/mockery": "^1.3.3",
-                "orchestra/testbench-browser-kit": "^6.23",
+                "orchestra/testbench-browser-kit": "^6.23 || ^7.0",
                 "phpunit/phpunit": "^9.5",
-                "spatie/laravel-translatable": "^4.4",
-                "symfony/dom-crawler": "^5.1.14"
+                "spatie/laravel-translatable": "^4.4 || ^5.0",
+                "symfony/dom-crawler": "^5.1.14 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -4354,7 +4354,7 @@
             ],
             "support": {
                 "issues": "https://github.com/protonemedia/laravel-form-components/issues",
-                "source": "https://github.com/protonemedia/laravel-form-components/tree/3.5.1"
+                "source": "https://github.com/protonemedia/laravel-form-components/tree/3.6.0"
             },
             "funding": [
                 {
@@ -4362,7 +4362,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-05T11:04:01+00:00"
+            "time": "2022-02-04T10:24:09+00:00"
         },
         {
             "name": "psr/cache",

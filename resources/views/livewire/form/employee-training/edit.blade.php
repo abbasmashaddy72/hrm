@@ -1,7 +1,7 @@
 <x-form-custom>
     <form wire:submit.prevent="submit">
         @csrf
-        <x-form.employee_inventory />
+        <x-form.employee_training />
         <div class="mt-3">
             <x-submit-button>
                 {{ __('Update') }}

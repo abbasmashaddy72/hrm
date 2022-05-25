@@ -12,7 +12,6 @@ class Employee extends Model
     protected $fillable = [
         'designation_id',
         'role_permission_id',
-        'user_id',
         'name',
         'gender',
         'photo',

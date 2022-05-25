@@ -1,14 +1,17 @@
-<div class="flex flex-wrap">
-    <div class="flex-auto w-full lg:w-2/4 lg:pr-3">
-        <label class="inline-block mb-2 text-gray-600" for="email">First name</label>
-        <input type="email"
-            class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
-            id="email1">
-    </div>
-    <div class="flex-auto w-full lg:w-2/4 lg:pl-3">
-        <label class="inline-block mb-2 text-gray-600" for="email">Last name</label>
-        <input type="email"
-            class="block w-full px-4 py-2 text-base font-normal bg-white border rounded outline-none focus:border-blue-500 focus:shadow hover:border-blue-500"
-            id="email1">
-    </div>
-</div>
+@wire('debounce.200ms')
+<x-form-select name="employee_id" label="Employee" :options="Helper::getKeyValues('Employee', 'name', 'id')" />
+
+<x-form-input name="date" label="Date" type="date" />
+
+<x-form-input name="clock_in" label="Clock In" type="time" />
+
+<x-form-input name="clock_out" label="Clock Out" type="time" />
+
+<x-form-input name="late" label="Late" type="number" />
+
+<x-form-input name="early_leaving" label="Early Leaving" type="number" />
+
+<x-form-input name="overtime" label="Overtime" type="number" />
+
+<x-form-select name="status" label="Employee" :options="Helper::getEnum('attendances', 'status')" />
+@endwire

@@ -19,7 +19,6 @@ class UserSeeder extends Seeder
 
         foreach ($users as $user) {
             $data = Employee::factory()->create([
-                'user_id' => $user->id,
                 'name' => $user->name,
                 'email' => $user->email
             ]);

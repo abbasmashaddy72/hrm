@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreEmailTemplateRequest;
 use App\Http\Requests\UpdateEmailTemplateRequest;
 use App\Models\EmailTemplate;
+use App\Services\Helper;
 
 class EmailTemplateController extends Controller
 {

@@ -23,20 +23,19 @@
                                 <!-- Email Address -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="email" :value="__('Email')" />
 
-                                        <x-input id="email" class="block w-full mt-1" type="email" name="email"
-                                            :value="old('email')" required autofocus />
+
+                                        <x-form-input id="email" class="block w-full mt-1" type="email" label="Email"
+                                            name="email" :value="old('email')" required autofocus />
                                     </div>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="password" :value="__('Password')" />
 
-                                        <x-input id="password" class="block w-full mt-1" type="password" name="password"
-                                            required autocomplete="current-password" />
+                                        <x-form-input id="password" class="block w-full mt-1" label="Password"
+                                            type="password" name="password" required autocomplete="current-password" />
                                     </div>
                                 </div>
 

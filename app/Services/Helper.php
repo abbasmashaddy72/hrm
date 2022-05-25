@@ -18,4 +18,12 @@ class Helper
 
         return $enum;
     }
+
+    public static function getKeyValues($model, $value, $key)
+    {
+        $model = "\\App\\Models\\" . $model;
+        $data = $model::all()->pluck($value, $key);
+
+        return $data;
+    }
 }

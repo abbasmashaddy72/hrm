@@ -35,7 +35,7 @@ class Edit extends Component
 
         Holiday::where('id', $this->holiday)->update($validatedData);
 
-        return $this->redirectRoute('');
+        return $this->redirectRoute('holiday.index');
     }
 
     public function render()

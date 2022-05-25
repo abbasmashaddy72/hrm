@@ -38,7 +38,7 @@ class Edit extends Component
 
         Department::where('id', $this->department)->update($validatedData);
 
-        return $this->redirectRoute('');
+        return $this->redirectRoute('department.index');
     }
 
     public function render()

@@ -43,7 +43,7 @@ class EmployeeAwardTable extends LivewireDatatable
                 ->filterable(),
 
             Column::callback(['id'], function ($id) {
-                return view('pages.award.actions', ['id' => $id]);
+                return view('pages.employee_award.actions', ['id' => $id]);
             })->excludeFromExport()->unsortable()->label('Action'),
         ];
     }

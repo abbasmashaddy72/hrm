@@ -27,9 +27,9 @@
                                 <!-- Email Address -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="email" :value="__('Email')" />
 
-                                        <x-input id="email" class="block w-full mt-1" type="email" name="email"
+
+                                        <x-form-input id="email" class="block w-full mt-1" type="email" name="email"
                                             :value="old('email')" required autofocus />
                                     </div>
                                 </div>

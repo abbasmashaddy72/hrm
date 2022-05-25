@@ -17,7 +17,6 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->foreignId('designation_id')->constrained('designations')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('role_permission_id')->constrained('role_permissions')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
             $table->enum('gender', ['Male', 'FeMale', 'Trans']);
             $table->string('photo')->nullable();

@@ -50,9 +50,9 @@ class JobsController extends Controller
      * @param  \App\Models\Jobs  $jobs
      * @return \Illuminate\Http\Response
      */
-    public function show(Jobs $jobs)
+    public function show(Jobs $job)
     {
-        $jobs = $jobs->id;
+        $jobs = $job->id;
 
         return view('pages.jobs.show', compact('jobs'));
     }
@@ -63,9 +63,9 @@ class JobsController extends Controller
      * @param  \App\Models\Jobs  $jobs
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jobs $jobs)
+    public function edit(Jobs $job)
     {
-        $jobs = $jobs->id;
+        $jobs = $job->id;
 
         return view('pages.jobs.edit', compact('jobs'));
     }

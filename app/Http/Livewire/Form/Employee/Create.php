@@ -9,7 +9,6 @@ class Create extends Component
 {
     public $designation_id;
     public $role_permission_id;
-    public $user_id;
     public $name;
     public $gender;
     public $photo;
@@ -36,7 +35,6 @@ class Create extends Component
     protected $rules = [
         'designation_id' => '',
         'role_permission_id' => '',
-        'user_id' => '',
         'name' => '',
         'gender' => '',
         'photo' => '',

@@ -1,3 +1,5 @@
-<div>
-    <!-- Knowing is not enough; we must apply. Being willing is not enough; we must do. - Leonardo da Vinci -->
-</div>
+@wire('debounce.200ms')
+<x-form-input name="name" label="Name" type="text" />
+
+<x-form-textarea name="description" label="Description" required />
+@endwire

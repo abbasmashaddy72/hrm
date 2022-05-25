@@ -11,10 +11,10 @@ class InventoryController extends Controller
 {
     public function __construct()
     {
-        $enum = Helper::getEnum('inventories', 'payment_mode');
+        $payment_modes = Helper::getEnum('inventories', 'payment_mode');
 
         view()->share('title', 'Inventory');
-        view()->share('payment_mode', $enum);
+        view()->share('payment_mode', $payment_modes);
     }
 
     /**
